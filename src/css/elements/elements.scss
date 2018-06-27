@@ -1,0 +1,26 @@
+.title{
+  @include font();
+
+  padding-bottom: rem(15px);
+  font-size: rem(56px);
+  color: $maincolor;
+}
+
+.desc{
+  @include font();
+
+  padding-bottom: rem(50px);
+  font-size: rem(13px);
+  color: $desccolor;
+}
+
+.btn{
+  @include font();
+
+  display: inline-block;
+  padding: rem(25px) rem(45px);
+  font-size: rem(12px);
+  text-transform: uppercase;
+  color: $btntext;
+  background: $btnbg;
+}

@@ -3,4 +3,15 @@
   background: url("../assets/img/section1/section1-bg.png") center no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
+
+  .desc{
+    max-width: 370px;
+  }
+}
+
+.swiper-slide{
+
+  .container{
+    padding: rem(150px) 0;
+  }
 }

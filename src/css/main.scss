@@ -6,11 +6,14 @@
 @import "_misc/adjustment";
 
 //elements
-//@import "elements/elements";
+@import "elements/elements";
 @import "elements/nav";
 
+//plugins
+@import "plugins/resets";
+
 //sections
-@import "elements/header";
-//@import "elements/footer";
+@import "sections/header";
+//@import "sections/footer";
 @import "sections/section1";
 
