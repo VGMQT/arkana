@@ -1,0 +1,20 @@
+.header__head{
+  padding-bottom: rem(30px);
+  border-bottom: 1px solid $linecolor;
+}
+
+.header__head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__svg{
+  width: rem(25px);
+  height: rem(25px);
+  fill: $maincolor;
+
+  &:first-child{
+    margin-right: rem(25px);
+  }
+}

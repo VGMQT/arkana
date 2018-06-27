@@ -1,0 +1,19 @@
+.nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: rem(30px) 0;
+}
+
+.nav__link{
+  @include font(sbold);
+
+  margin-right: rem(80px);
+  font-size: rem(12px);
+  text-transform: uppercase;
+  color: $maincolor;
+
+  &:last-child{
+    margin-right: 0;
+  }
+}
