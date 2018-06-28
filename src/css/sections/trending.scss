@@ -1,0 +1,136 @@
+.trending{
+  padding: $secpad 0;
+
+  .title{
+    font-size: rem(42px);
+    text-align: center;
+  }
+
+  .desc{
+    max-width: rem(735px);
+    margin: auto;
+    text-align: center;
+  }
+}
+
+.tabs{
+  margin-bottom: rem(50px);
+  text-align: center;
+  font-size: 0;
+
+  .active{
+    background: $nextbtnbg;
+
+    &:after{
+      border-top-color: $nextbtnbg;
+    }
+
+    .tabs__link{
+      color: $linecolor;
+    }
+  }
+}
+
+.tabs__item{
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: rem(140px);
+  margin-right: rem(20px);
+  font-size: rem(14px);
+  background: $tabsitem;
+  transition: all .3s;
+
+  &:after{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: rem(-15px);
+    border: rem(15px) solid transparent;
+    border-bottom: 0;
+    border-top-color: $tabsitem;
+    content: "";
+    transition: all .3s;
+  }
+
+  &:hover{
+    background: $nextbtnbg;
+
+    &:after{
+      border-top-color: $nextbtnbg;
+    }
+
+    .tabs__link{
+      color: $linecolor;
+    }
+  }
+
+  &:active{
+    .tabs__link{
+      color: $nextbtnbg;
+    }
+  }
+}
+
+.tabs__link{
+  @include font();
+  display: block;
+  height: 100%;
+  padding: rem(10px) 0;
+  color: $btnbg;
+  transition: all .3s;
+}
+
+.trending__products-page{
+  padding: rem(25px) 0;
+  text-align: center;
+  background: $assortmentbg;
+}
+
+.products__item{
+  margin-bottom: rem(40px);
+
+  .title{
+    font-size: rem(14px);
+  }
+
+  .desc{
+    padding-bottom: 0;
+    font-size: rem(16px);
+  }
+}
+
+.products__img{
+  position: relative;
+  display: inline-block;
+  width: rem(350px);
+  height: rem(460px);
+  margin-bottom: rem(15px);
+
+  img{
+    @extend %img;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.label{
+  @include font();
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  padding: rem(5px) rem(12px);
+  font-size: rem(12px);
+}
+
+.new{
+  color: $btntext;
+  background: $btnbg;
+}

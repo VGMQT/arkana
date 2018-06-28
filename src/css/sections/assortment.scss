@@ -1,15 +1,15 @@
-.assortment{
+.assortment {
   padding: $secpad 0;
 }
 
-.assortment__list{
+.assortment__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
 
-.assortment__item{
+.assortment__item {
   margin-bottom: rem(40px);
 }
 
@@ -22,19 +22,17 @@
 
   img {
     @extend %img;
-
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 
-  .btn{
+  .btn {
     position: absolute;
     bottom: 20px;
     left: 50%;
     margin-left: rem(-125px);
-
     width: rem(250px);
     height: rem(65px);
     text-align: center;
@@ -43,7 +41,7 @@
 
     &:hover {
       color: $btntext;
-      background:$btnbg;
+      background: $btnbg;
     }
 
     &:active {
