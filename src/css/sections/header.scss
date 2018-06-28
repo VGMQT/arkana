@@ -1,20 +1,81 @@
 .header__head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding-bottom: rem(30px);
   border-bottom: 1px solid $linecolor;
 }
 
-.header__head{
+.header__svg-wrapper{
   display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .header__svg{
   width: rem(25px);
   height: rem(25px);
   fill: $maincolor;
+  transition: all .3s;
 
   &:first-child{
     margin-right: rem(25px);
   }
+
+  &:hover{
+    transform: scale(1.1);
+  }
+
+  &:active{
+    transform: none;
+  }
+}
+
+.logo{
+  display: block;
+  transition: all .3s;
+
+  &:hover{
+    transform: scale(1.1);
+  }
+
+  &:active{
+    transform: none;
+  }
+}
+
+.header__svg-basket{
+  position: relative;
+  transition: all .3s;
+
+  .header__svg{
+    margin-right: 0;
+    transform: none;
+  }
+
+  &:hover{
+    transform: scale(1.1);
+  }
+
+  &:active{
+    transform: none;
+  }
+}
+
+.buyings-count{
+  @include font(medium);
+
+  position: absolute;
+  right: -5px;
+  bottom: 2px;
+
+  width: 15px;
+  height: 15px;
+  padding-top: 1px;
+  font-size: 8px;
+  line-height: 15px;
+  text-align: center;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  color: $btntext;
+  background: $btnbg;
 }

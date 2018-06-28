@@ -71,6 +71,15 @@
   border-radius: 0;
   background: $btntext;
   opacity: 1;
+  transition: all .3s;
+
+  &:hover{
+    background: $nextbtnbg;
+  }
+
+  &:active{
+    background: $btnbg;
+  }
 }
 
 .swiper-pagination-bullet-active {

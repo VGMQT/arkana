@@ -23,4 +23,14 @@
   text-transform: uppercase;
   color: $btntext;
   background: $btnbg;
+  transition: all .3s;
+
+  &:hover{
+    background: $nextbtnbg;
+  }
+
+  &:active{
+    color: $btnbg;
+    background: $btntext;
+  }
 }
