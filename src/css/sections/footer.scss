@@ -1,0 +1,32 @@
+.footer{
+  background: $footerbg;
+  .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+.copyright{
+  @include font();
+  font-size: rem(13px);
+  color: $copyright;
+}
+
+.payment{
+  display: flex;
+}
+
+.payment__method{
+  margin-right: rem(15px);
+
+  &:last-child{
+    margin-right: 0;
+  }
+
+  img{
+    display: block;
+    width: rem(35px);
+  }
+}
