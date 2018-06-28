@@ -1,6 +1,6 @@
-.footer{
+.footer {
   background: $footerbg;
-  .container{
+  .container-sm {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -8,24 +8,24 @@
   }
 }
 
-.copyright{
+.copyright {
   @include font();
   font-size: rem(13px);
   color: $copyright;
 }
 
-.payment{
+.payment {
   display: flex;
 }
 
-.payment__method{
+.payment__method {
   margin-right: rem(15px);
 
-  &:last-child{
+  &:last-child {
     margin-right: 0;
   }
 
-  img{
+  img {
     display: block;
     width: rem(35px);
   }

@@ -1,22 +1,22 @@
 //----------------------<<vars>>----------------------\\
-$container-width: 1120px;
+$container-width: 1880px;
 $footer-height: 60px;
 
 //----------------------<<css>>----------------------\\
 html {
   font-size: 16px;
 
-   //@include laptop{
-   //	font-size: 15px;
-   //}
-   //
-   //@include tablet{
-   //	font-size: 14px;
-   //}
-   //
-   //@include mobile{
-   //	font-size: 12px;
-   //}
+  //@include laptop{
+  //	font-size: 15px;
+  //}
+  //
+  //@include tablet{
+  //	font-size: 14px;
+  //}
+  //
+  //@include mobile{
+  //	font-size: 12px;
+  //}
 }
 
 html,
@@ -32,7 +32,7 @@ body {
 
 .wrapper {
   position: relative;
-  min-width: $container-width + 20;
+  //min-width: $container-width + 40;
   min-height: 100%;
   overflow: hidden;
 }
@@ -45,25 +45,25 @@ body {
 }
 
 .container {
-  width: $container-width;
-  // max-width: $container-width;
+  //width: $container-width;
+   max-width: $container-width;
   margin: 0 auto;
 
-   //@include desktop{
-   //	width: 1000px;
-   //}
-   //
-   //@include laptop{
-   //	width: 670px;
-   //}
-   //
-   //@include tablet{
-   //	width: 460px;
-   //}
-   //
-   //@include mobile{
-   //	width: 300px;
-   //}
+  //@include desktop{
+  //	width: 1000px;
+  //}
+  //
+  //@include laptop{
+  //	width: 670px;
+  //}
+  //
+  //@include tablet{
+  //	width: 460px;
+  //}
+  //
+  //@include mobile{
+  //	width: 300px;
+  //}
 }
 
 * {
@@ -80,11 +80,11 @@ h6 {
   font-weight: normal;
 }
 
-p{
+p {
   margin: 0;
 }
 
-a{
+a {
   text-decoration: none;
   outline: none;
 }
@@ -98,18 +98,19 @@ li {
   list-style: none;
 }
 
-input[type='number'] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
-input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
 footer {
   position: relative;
-  min-width: $container-width + 20;
+  //min-width: $container-width + 40;
   width: 100%;
   height: $footer-height;
   margin-top: -$footer-height;

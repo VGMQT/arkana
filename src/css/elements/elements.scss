@@ -1,26 +1,28 @@
-.wrapper{
+.wrapper {
   background: $btntext;
 }
 
-.title{
-  @include font();
+.container-sm {
+  max-width: 1120px;
+  margin: 0 auto;
+}
 
+.title {
+  @include font();
   padding-bottom: rem(15px);
   font-size: rem(56px);
   color: $maincolor;
 }
 
-.desc{
+.desc {
   @include font();
-
   padding-bottom: rem(50px);
   font-size: rem(13px);
   color: $desccolor;
 }
 
-.btn{
+.btn {
   @include font();
-
   display: inline-block;
   padding: rem(25px) rem(45px);
   font-size: rem(12px);
@@ -29,11 +31,11 @@
   background: $btnbg;
   transition: all .3s;
 
-  &:hover{
+  &:hover {
     background: $nextbtnbg;
   }
 
-  &:active{
+  &:active {
     color: $btnbg;
     background: $btntext;
   }

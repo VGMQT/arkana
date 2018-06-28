@@ -1,4 +1,12 @@
-.header__head{
+.header{
+  position: relative;
+  z-index: 100;
+
+  padding-top: rem(30px);
+  margin-bottom: rem(-210px);
+}
+
+.header__head {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -6,54 +14,52 @@
   border-bottom: 1px solid $linecolor;
 }
 
-.header__svg-wrapper{
+.header__svg-wrapper {
   display: flex;
 }
 
-.header__head-link{
+.header__head-link {
   position: relative;
   display: block;
   transition: all .3s;
 
-  &:hover{
+  &:hover {
     transform: scale(1.1);
   }
 
-  &:active{
+  &:active {
     transform: none;
   }
 
-  &:first-child{
+  &:first-child {
     margin-right: rem(25px);
   }
 }
 
-.header__svg{
+.header__svg {
   width: rem(25px);
   height: rem(25px);
   fill: $maincolor;
 }
 
-.logo{
+.logo {
   display: block;
   transition: all .3s;
 
-  &:hover{
+  &:hover {
     transform: scale(1.1);
   }
 
-  &:active{
+  &:active {
     transform: none;
   }
 }
 
-.buyings-count{
+.buyings-count {
   @include font(medium);
-
   position: absolute;
   right: -5px;
   bottom: 2px;
-
   width: 15px;
   height: 15px;
   padding-top: 1px;
@@ -61,8 +67,8 @@
   line-height: 15px;
   text-align: center;
   -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
+     -moz-border-radius: 50%;
+          border-radius: 50%;
   color: $btntext;
   background: $btnbg;
 }

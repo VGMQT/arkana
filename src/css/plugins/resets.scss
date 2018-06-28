@@ -12,41 +12,41 @@
   z-index: 10;
   border: 3px solid $btntext;
   -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
+     -moz-border-radius: 50%;
+          border-radius: 50%;
   cursor: pointer;
   transition: all .3s;
 }
 
-.swiper-button-pr{
+.swiper-button-pr {
   left: 20px;
   right: auto;
   background: transparent;
 
-  &:hover{
+  &:hover {
     background: $nextbtnbg;
 
-    .swiper__svg{
+    .swiper__svg {
       fill: $btntext;
     }
   }
 }
 
-.swiper-button-nx{
+.swiper-button-nx {
   right: 20px;
   left: auto;
   background: $nextbtnbg;
 
-  &:hover{
+  &:hover {
     background: $btntext;
 
-    .swiper__svg{
+    .swiper__svg {
       fill: $nextbtnbg;
     }
   }
 }
 
-.swiper__svg{
+.swiper__svg {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -61,23 +61,23 @@
   text-align: left;
 }
 
-.swiper-container-horizontal > .swiper-pagination-bullets{
-  left: 110px;
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  left: 401px;
 }
 
 .swiper-pagination-bullet {
   -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
   background: $btntext;
   opacity: 1;
   transition: all .3s;
 
-  &:hover{
+  &:hover {
     background: $nextbtnbg;
   }
 
-  &:active{
+  &:active {
     background: $btnbg;
   }
 }

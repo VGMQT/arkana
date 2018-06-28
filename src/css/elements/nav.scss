@@ -1,13 +1,12 @@
-.nav{
+.nav {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: rem(20px) 0;
 }
 
-.nav__link{
+.nav__link {
   @include font(sbold);
-
   padding: rem(10px);
   margin-right: rem(70px);
   font-size: rem(12px);
@@ -15,16 +14,16 @@
   color: $maincolor;
   transition: all .3s;
 
-  &:hover{
+  &:hover {
     background: $btnbg;
     color: $btntext;
   }
 
-  &:active{
+  &:active {
     color: $btnbg;
   }
 
-  &:last-child{
+  &:last-child {
     margin-right: 0;
   }
 }

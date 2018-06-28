@@ -1,17 +1,17 @@
-.intro{
-  padding: rem(40px) 0;
+.intro {
+  padding: $secpad 0;
   background: url("../assets/img/intro/intro-bg.png") center no-repeat;
   -webkit-background-size: cover;
-  background-size: cover;
+          background-size: cover;
 
-  .desc{
+  .desc {
     max-width: 370px;
   }
 }
 
-.swiper-slide{
-
-  .container{
-    padding: rem(150px) 0;
+.swiper-slide {
+  .container-sm {
+    padding-top: rem(300px);
+    padding-bottom: rem(150px);
   }
 }
