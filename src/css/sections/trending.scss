@@ -1,37 +1,37 @@
-.trending{
+.trending {
   padding: $secpad 0;
 
-  .title{
+  .title {
     font-size: rem(42px);
     text-align: center;
   }
 
-  .desc{
+  .desc {
     max-width: rem(735px);
     margin: auto;
     text-align: center;
   }
 }
 
-.tabs{
+.tabs {
   margin-bottom: rem(50px);
   text-align: center;
   font-size: 0;
 
-  .active{
+  .active {
     background: $nextbtnbg;
 
-    &:after{
+    &:after {
       border-top-color: $nextbtnbg;
     }
 
-    .tabs__link{
+    .tabs__link {
       color: $linecolor;
     }
   }
 }
 
-.tabs__item{
+.tabs__item {
   position: relative;
   display: inline-block;
   vertical-align: middle;
@@ -41,7 +41,7 @@
   background: $tabsitem;
   transition: all .3s;
 
-  &:after{
+  &:after {
     position: absolute;
     top: 90%;
     left: 50%;
@@ -55,26 +55,26 @@
     transition: all .3s;
   }
 
-  &:hover{
+  &:hover {
     background: $nextbtnbg;
 
-    &:after{
+    &:after {
       border-top-color: $nextbtnbg;
     }
 
-    .tabs__link{
+    .tabs__link {
       color: $linecolor;
     }
   }
 
-  &:active{
-    .tabs__link{
+  &:active {
+    .tabs__link {
       color: $nextbtnbg;
     }
   }
 }
 
-.tabs__link{
+.tabs__link {
   @include font();
   display: block;
   height: 100%;
@@ -83,54 +83,212 @@
   transition: all .3s;
 }
 
-.trending__products-page{
+.trending__products-page {
   padding: rem(25px) 0;
   text-align: center;
   background: $assortmentbg;
+
+  .btn {
+    padding: rem(25px) rem(60px);
+  }
 }
 
-.products__item{
+.products__list {
+  text-align: center;
+  margin-right: rem(-25px);
+  font-size: 0;
+}
+
+.products__item {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: rem(25px);
   margin-bottom: rem(40px);
 
-  .title{
+  &:hover {
+    .products__img {
+      .btn_left {
+        left: 0;
+        opacity: 1;
+      }
+
+      .btn_right {
+        right: 0;
+        opacity: 1;
+      }
+
+      .products__img-hover {
+        opacity: 1;
+      }
+    }
+
+    .desc {
+      opacity: 0;
+    }
+
+    .products__colors {
+      opacity: 1;
+    }
+  }
+
+  * {
+    font-size: 16px;
+  }
+
+  .title {
     font-size: rem(14px);
   }
 
-  .desc{
+  .desc {
+    display: inline-block;
     padding-bottom: 0;
+    margin-right: rem(10px);
     font-size: rem(16px);
+    transition: all .3s;
+  }
+
+  .old-price {
+    display: inline-block;
+    text-decoration: line-through;
+    font-size: rem(13px);
   }
 }
 
-.products__img{
+.products__img {
   position: relative;
-  display: inline-block;
   width: rem(350px);
   height: rem(460px);
   margin-bottom: rem(15px);
 
-  img{
+  img {
     @extend %img;
-
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+  .btn {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    padding: rem(18px) 0;
+    margin: rem(15px);
+    display: inline-block;
+    width: rem(150px);
+    height: 50px;
+    font-size: rem(11px);
+    color: $btnbg;
+    background: $btntext;
+    opacity: 0;
+    transition: opacity .3s, color .3s, background .3s;
+
+    &:hover {
+      color: $btntext;
+      background: $nextbtnbg;
+    }
+
+    &:active {
+      color: $nextbtnbg;
+    }
+  }
 }
 
-.label{
-  @include font();
+.btn_left {
+  left: -9999px;
+}
 
+.btn_right {
+  right: 9999px;
+}
+
+.products__img-hover {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: rgba(#c5c5c5, .5);
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+.label {
+  @include font();
   position: absolute;
   top: 0;
-  right: 0;
-
   padding: rem(5px) rem(12px);
+  margin: rem(15px);
   font-size: rem(12px);
 }
 
-.new{
+.new {
+  right: 0;
   color: $btntext;
   background: $btnbg;
+}
+
+.discount {
+  left: 0;
+  color: $btntext;
+  background: $discount;
+  &:before {
+    content: "-";
+  }
+}
+
+.products__colors {
+  position: absolute;
+  bottom: 0;
+  left: rem(120px);
+  text-align: center;
+  font-size: 0;
+  opacity: 0;
+  transition: all .3s;
+
+  .active {
+    margin-left: rem(5px);
+    margin-right: rem(12px);
+    border: 1px solid $btnbg;
+    transform: scale(1.4);
+  }
+}
+
+.color-red,
+.color-orange,
+.color-green,
+.color-blue {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: rem(7px);
+  transition: all .3s;
+
+  &:hover {
+    transform: scale(1.4);
+  }
+
+  &:active {
+    transform: none;
+  }
+
+  * {
+    font-size: 16px;
+  }
+}
+
+.color-red {
+  background: $cred;
+}
+
+.color-orange {
+  background: $corange;
+}
+
+.color-green {
+  background: $cgreen;
+}
+
+.color-blue {
+  background: $cblue;
 }
