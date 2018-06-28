@@ -10,26 +10,8 @@
   display: flex;
 }
 
-.header__svg{
-  width: rem(25px);
-  height: rem(25px);
-  fill: $maincolor;
-  transition: all .3s;
-
-  &:first-child{
-    margin-right: rem(25px);
-  }
-
-  &:hover{
-    transform: scale(1.1);
-  }
-
-  &:active{
-    transform: none;
-  }
-}
-
-.logo{
+.header__head-link{
+  position: relative;
   display: block;
   transition: all .3s;
 
@@ -40,16 +22,21 @@
   &:active{
     transform: none;
   }
+
+  &:first-child{
+    margin-right: rem(25px);
+  }
 }
 
-.header__svg-basket{
-  position: relative;
-  transition: all .3s;
+.header__svg{
+  width: rem(25px);
+  height: rem(25px);
+  fill: $maincolor;
+}
 
-  .header__svg{
-    margin-right: 0;
-    transform: none;
-  }
+.logo{
+  display: block;
+  transition: all .3s;
 
   &:hover{
     transform: scale(1.1);
