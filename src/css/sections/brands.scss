@@ -1,22 +1,22 @@
-.brands{
-    padding: $secpad 0;
+.brands {
+  padding: $secpad 0;
 }
 
-.brands__list{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.brands__list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.brands__link{
-    display: block;
-    transition: all .3s;
+.brands__link {
+  display: block;
+  transition: all .3s;
 
-    &:hover{
-        transform: scale(1.2)
-    }
+  &:hover {
+    transform: scale(1.2);
+  }
 
-    &:active{
-        transform: none;
-    }
+  &:active {
+    transform: none;
+  }
 }

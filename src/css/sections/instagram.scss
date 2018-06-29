@@ -1,54 +1,51 @@
-.instagram{
-
-    .container{
-        position: relative;
-    }
+.instagram {
+  .container {
+    position: relative;
+  }
 }
 
-.instagram__link{
-    display: block;
+.instagram__link {
+  display: block;
 
-    .title{
-        position: absolute;
-        z-index: 2;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
-        font-size: rem(42px);
-        color: $btntext;
-        transition: all .3s;
-    }
-
-    &:hover{
-        .title{
-            animation-name: instagram;
-            animation-duration: 1.5s;
-            animation-iteration-count: infinite;
-            animation-direction: alternate;
-        }
-    }
-}
-
-.instagram__pics{
-    display: flex;
-}
-
-.instagram__item{
-    width: rem(320px);
-
-    img{
-        @extend %img;
-    }
-}
-
-.instagram__pics-hover{
+  .title {
     position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: rem(42px);
+    color: $btntext;
+    transition: all .3s;
+  }
 
-    width: 100%;
-    height: 100%;
-    background: rgba($btnbg, .2);
+  &:hover {
+    .title {
+      animation-name: instagram;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+  }
+}
+
+.instagram__pics {
+  display: flex;
+}
+
+.instagram__item {
+  width: rem(320px);
+
+  img {
+    @extend %img;
+  }
+}
+
+.instagram__pics-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: rgba($btnbg, .2);
 }
