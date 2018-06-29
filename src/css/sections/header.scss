@@ -16,11 +16,14 @@
 .header__svg-wrapper {
   position: relative;
   display: flex;
+  align-items: center;
 }
 
 .header__head-link {
   position: relative;
   display: block;
+  width: rem(25px);
+  height: rem(25px);
   transition: all .3s;
 
   &:hover {
@@ -37,8 +40,7 @@
 }
 
 .header__svg {
-  width: rem(25px);
-  height: rem(25px);
+  @extend %img;
   fill: $maincolor;
 }
 
