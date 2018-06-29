@@ -1,0 +1,145 @@
+.info {
+  padding: $secpad 0;
+
+  .container-sm {
+    display: flex;
+  }
+}
+
+.socials {
+  width: 35%;
+  margin-right: rem(30px);
+
+  .logo {
+    display: inline-block;
+    padding-bottom: rem(40px);
+    &:hover {
+      transform: none;
+    }
+  }
+  .desc {
+    max-width: rem(250px);
+    padding-bottom: rem(35px);
+  }
+}
+
+.socials__list {
+  display: flex;
+  padding-bottom: rem(35px);
+}
+
+.socials__item {
+  margin-right: rem(10px);
+}
+
+.socials__link {
+  position: relative;
+  display: block;
+  width: rem(40px);
+  height: rem(40px);
+  border-radius: 50%;
+  background: $socialsbg;
+  transition: all .3s;
+
+  &:hover {
+    background: $btnbg;
+
+    .socials__svg {
+      fill: $btntext;
+    }
+  }
+
+  &:active {
+    .socials__svg {
+      fill: $btnbg;
+    }
+  }
+}
+
+.socials__svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: rem(15px);
+  height: rem(15px);
+  fill: $socialssvg;
+  transition: all .3s;
+}
+
+.socials__form {
+  position: relative;
+}
+
+.socials__input {
+  @include font();
+  width: 100%;
+  padding: rem(20px) rem(120px) rem(20px) rem(20px);
+  border: 1px solid $inputborder;
+  outline: none;
+  font-size: rem(12px);
+  transition: all .3s;
+
+  &:focus {
+    border-color: $btnbg;
+  }
+}
+
+.socials__submit {
+  @include font(medium);
+  position: absolute;
+  top: 50%;
+  right: 1px;
+  margin-top: rem(-16px);
+  padding: rem(10px) rem(20px);
+  border: none;
+  outline: none;
+  color: $btnbg;
+  background: $btntext;
+  cursor: pointer;
+
+  &:hover {
+    color: $desccolor;
+    background: $btntext;
+  }
+
+  &:active {
+    color: $btntext;
+  }
+}
+
+.info__list {
+  display: flex;
+  justify-content: space-between;
+  width: 65%;
+}
+
+.info__item {
+  .title {
+    padding-bottom: rem(50px);
+    font-size: rem(18px);
+  }
+}
+
+.info__links-item {
+  &:hover {
+    .info__link {
+      color: $btnbg;
+    }
+  }
+
+  &:active {
+    .info__link {
+      color: $btntext;
+    }
+  }
+}
+
+.info__link {
+  @include font();
+  display: block;
+  padding-bottom: rem(15px);
+  font-size: rem(13px);
+  color: $desccolor;
+  transition: all .3s;
+}
