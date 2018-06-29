@@ -7,3 +7,16 @@
     justify-content: space-around;
     align-items: center;
 }
+
+.brands__link{
+    display: block;
+    transition: all .3s;
+
+    &:hover{
+        transform: scale(1.2)
+    }
+
+    &:active{
+        transform: none;
+    }
+}
