@@ -1,0 +1,51 @@
+.assortment {
+  padding: $secpad 0;
+}
+
+.assortment__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.assortment__item {
+  margin-bottom: rem(40px);
+}
+
+.assortment__link {
+  position: relative;
+  display: block;
+  width: rem(445px);
+  height: rem(440px);
+  background: $assortmentbg;
+
+  img {
+    @extend %img;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: rem(-125px);
+    width: rem(250px);
+    height: rem(65px);
+    text-align: center;
+    color: $btnbg;
+    background: $btntext;
+
+    &:hover {
+      color: $btntext;
+      background: $btnbg;
+    }
+
+    &:active {
+      background: $nextbtnbg;
+    }
+  }
+}

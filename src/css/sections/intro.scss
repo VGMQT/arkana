@@ -1,0 +1,17 @@
+.intro {
+  padding: $secpad 0;
+  background: url("../assets/img/intro/intro-bg.png") center no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+
+  .desc {
+    max-width: 370px;
+  }
+}
+
+.swiper-slide {
+  .container-sm {
+    padding-top: rem(300px);
+    padding-bottom: rem(150px);
+  }
+}

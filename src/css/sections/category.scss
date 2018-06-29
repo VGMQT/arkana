@@ -1,0 +1,60 @@
+.category {
+  background: $categorybg;
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.category__img {
+  width: 50%;
+  height: 100%;
+
+  img {
+    @extend %img;
+  }
+}
+
+.category__text {
+  width: 50%;
+  padding: rem(30px) 0;
+  text-align: center;
+
+  .title {
+    position: relative;
+    font-size: rem(42px);
+    padding-bottom: rem(70px);
+
+    &:after {
+      position: absolute;
+      bottom: rem(40px);
+      left: 50%;
+      margin-left: rem(-50px);
+      width: rem(100px);
+      height: 2px;
+      background: $linecolor;
+      content: "";
+    }
+  }
+
+  .desc {
+    max-width: rem(500px);
+    margin: auto;
+  }
+
+  .btn {
+    border: 1px solid $btnbg;
+    color: $btnbg;
+    background: $btntext;
+
+    &:hover {
+      background: $btnbg;
+      color: $btntext;
+    }
+
+    &:active {
+      color: $btnbg;
+    }
+  }
+}

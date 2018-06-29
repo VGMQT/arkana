@@ -1,0 +1,117 @@
+//----------------------<<vars>>----------------------\\
+$container-width: 1880px;
+$footer-height: 60px;
+
+//----------------------<<css>>----------------------\\
+html {
+  font-size: 16px;
+
+  //@include laptop{
+  //	font-size: 15px;
+  //}
+  //
+  //@include tablet{
+  //	font-size: 14px;
+  //}
+  //
+  //@include mobile{
+  //	font-size: 12px;
+  //}
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  line-height: 1.42;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrapper {
+  position: relative;
+  //min-width: $container-width + 40;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.wrapper:after {
+  display: block;
+  height: $footer-height;
+  overflow: hidden;
+  content: "";
+}
+
+.container {
+  //width: $container-width;
+  max-width: $container-width;
+  margin: 0 auto;
+
+  //@include desktop{
+  //	width: 1000px;
+  //}
+  //
+  //@include laptop{
+  //	width: 670px;
+  //}
+  //
+  //@include tablet{
+  //	width: 460px;
+  //}
+  //
+  //@include mobile{
+  //	width: 300px;
+  //}
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  font-weight: normal;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+footer {
+  position: relative;
+  //min-width: $container-width + 40;
+  width: 100%;
+  height: $footer-height;
+  margin-top: -$footer-height;
+}
