@@ -29,7 +29,7 @@ function initMap() {
     const marker = new google.maps.Marker({
         position: myLatLng,
         map: map,
-        title: "Dublin's iPad Apps",
+        title: "A R K A N A",
         icon: "assets/img/svg/marker.svg"
     });
 
