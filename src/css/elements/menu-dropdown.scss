@@ -66,13 +66,6 @@
   &:last-child {
     padding-bottom: 0;
   }
-
-  .active {
-    &:before {
-      width: rem(17px);
-      margin-right: rem(10px);
-    }
-  }
 }
 
 .menu-categories__link {
@@ -81,7 +74,7 @@
   margin-left: -3px;
   font-size: rem(12px);
   color: $btnbg;
-  transition: alll .3s;
+  transition: all .3s;
 
   &:before {
     display: inline-block;
@@ -91,6 +84,20 @@
     background: $btnbg;
     content: "";
     transition: all .3s;
+  }
+
+  &:hover {
+    &:before {
+      width: rem(17px);
+      margin-right: rem(10px);
+    }
+  }
+
+  &:active {
+    color: $btntext;
+    &:before {
+      background: $btntext;
+    }
   }
 }
 

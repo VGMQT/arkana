@@ -1,0 +1,271 @@
+.basket {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  width: 0;
+  height: 94%;
+  margin-top: rem(47px);
+  background: $btntext;
+}
+
+.basket__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 350px;
+  padding: rem(30px) rem(30px);
+  background: $shopcartbg;
+  .title {
+    padding: 0;
+    margin: 0;
+    margin-right: auto;
+    text-transform: uppercase;
+    font-size: rem(22px);
+  }
+}
+
+.basket__close {
+  display: block;
+  width: rem(15px);
+  height: rem(15px);
+  margin-left: auto;
+  transition: all .3s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &:active {
+    transform: none;
+  }
+}
+
+.basket__svg {
+  @extend %img;
+  fill: $basketsvg;
+}
+
+.basket__products {
+  min-width: 350px;
+  padding: rem(25px) rem(30px);
+}
+
+.basket__products-item {
+  display: flex;
+  justify-content: space-between;
+  margin-right: rem(-3px);
+  margin-bottom: rem(12px);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.basket__products-link {
+  display: flex;
+  width: 80%;
+
+  &:hover {
+    .basket__products-text {
+      .products-text__price {
+        color: $desccolor;
+      }
+    }
+  }
+
+  &:active {
+    .basket__products-text {
+      .products-text__price {
+        transform: scale(.98);
+      }
+    }
+  }
+}
+
+.basket__products-img {
+  width: rem(75px);
+  height: rem(105px);
+  margin-right: rem(10px);
+
+  img {
+    @extend %img;
+  }
+}
+
+.basket__products-text {
+  width: 60%;
+  .title {
+    font-size: rem(13px);
+  }
+}
+
+.products-text__params {
+  padding-bottom: rem(5px);
+  font-size: rem(11px);
+  color: $btnbg;
+}
+
+.params__size {
+  &:before {
+    color: $desccolor;
+    content: "Size: ";
+  }
+}
+
+.params__color {
+  &:before {
+    color: $desccolor;
+    content: "Color: ";
+  }
+}
+
+.products-text__price {
+  @include font(medium);
+  color: $btnbg;
+  transition: all .3s;
+}
+
+.products-text__nominal {
+  font-size: rem(20px);
+
+  &:before {
+    content: "$";
+  }
+}
+
+.products-text__count {
+  font-size: rem(13px);
+
+  &:before {
+    color: $desccolor;
+    content: "x ";
+  }
+}
+
+.basket__products-close {
+  position: relative;
+  width: rem(20px);
+  height: rem(20px);
+  border-radius: 50%;
+  background: $basketsvgcircle;
+  transition: all .3s;
+
+  &:hover {
+    background: $btnbg;
+  }
+
+  &:active {
+    background: $btntext;
+
+    .basket__products-svg {
+      fill: $btnbg;
+    }
+  }
+}
+
+.basket__products-svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: rem(10px);
+  height: rem(10px);
+  fill: $btntext;
+  transition: all .3s;
+}
+
+.basket__products-dummy {
+  @include font();
+  display: none;
+  font-size: rem(16px);
+  text-align: center;
+  color: $desccolor;
+}
+
+.basket__price {
+  min-width: 350px;
+  padding: rem(20px) rem(30px) rem(10px);
+  background: $shopcartbg;
+}
+
+.price__counters {
+  padding-bottom: rem(5px);
+  border-bottom: 1px solid $linecolor;
+}
+
+.price__counters-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: rem(10px);
+  color: $btnbg;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.counters-item__name {
+  @include font();
+  font-size: rem(13px);
+}
+
+.counters-item__cost {
+  @include font(medium);
+  font-size: rem(14px);
+
+  &::after {
+    content: " $";
+  }
+}
+
+.price__checkout {
+  text-align: center;
+}
+
+.price__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: rem(5px) 0;
+  color: $btnbg;
+}
+
+.price__total-name {
+  @include font();
+  text-transform: uppercase;
+  font-size: rem(13px);
+}
+
+.price__total-cost {
+  @include font(medium);
+  font-size: rem(20px);
+
+  &:after {
+    content: " $";
+  }
+}
+
+.price__proceed {
+  @include font(medium);
+  display: block;
+  padding: rem(19px) rem(59px);
+  margin: auto;
+  text-transform: uppercase;
+  font-size: rem(12px);
+  border: 1px solid $btnbg;
+  border-radius: 25px;
+  color: $btntext;
+  background: $btnbg;
+  transition: all .3s;
+
+  &:hover {
+    background: $btntext;
+    color: $btnbg;
+  }
+
+  &:active {
+    border: 1px solid transparent;
+  }
+}

@@ -57,23 +57,81 @@ $(document).ready(function () {
     });
 
     //----------------------<<menu link hover>>----------------------\\
-    $(".menu-categories__link").on({
+    // $(".menu-categories__link").on({
     
-        mouseenter: function(){
+    //     mouseenter: function(){
 
-            const $this = $(this);
+    //         const $this = $(this);
 
-            $this.addClass('active')
-                .siblings()
-                .removeClass('active');
-        },
+    //         $this.addClass('active')
+    //             .siblings()
+    //             .removeClass('active');
+    //     },
 
-        "mouseleave click": function(){
+    //     "mouseleave click": function(){
 
-            const $this = $(this);
+    //         const $this = $(this);
 
-            $this.removeClass('active');
+    //         $this.removeClass('active');
+    //     }
+    // });
+
+    //----------------------<<basket sidebar>>----------------------\\
+    $('#basket-trigger').on('click', function (e) {
+
+        e.preventDefault();
+
+        sidebarAnimate(350);
+
+    });
+
+    $('#basket-close').on('click', function (e) {
+
+        e.preventDefault();
+
+        sidebarAnimate(0);
+
+    });
+
+    function sidebarAnimate(width) {
+
+        let flag = true;
+
+        const $basket = $('.basket');
+        const duration = 500;
+
+        if(flag) {
+            flag = false;
+
+            $basket.animate({
+                width: width
+            }, duration, function () {
+                flag = true;
+            });
         }
+    }
+
+    //----------------------<<sidebar checkbox>>----------------------\\
+
+    $('.basket__products-close').on('click', function (e) {
+        e.preventDefault();
+
+        const $this = $(this);
+
+        const $item = $(".basket__products-item"),
+              curItem = $this.closest($item),
+              duration = 1000;
+
+        curItem.slideUp(duration, function(){
+
+            curItem.remove();
+
+            if($item.length < 2) {
+
+                $('.basket__products-dummy').slideDown(500);
+
+            }
+        });
     });
 
 });
