@@ -19,26 +19,29 @@
   font-size: 0;
 
   .active {
+    color: $linecolor;
     background: $nextbtnbg;
 
     &:after {
       border-top-color: $nextbtnbg;
     }
-
-    .tabs__link {
-      color: $linecolor;
-    }
   }
 }
 
-.tabs__item {
+.tabs__button {
+  @include font();
   position: relative;
   display: inline-block;
   vertical-align: middle;
   width: rem(140px);
+  padding: rem(10px) 0;
   margin-right: rem(20px);
+  outline: none;
+  border: none;
   font-size: rem(14px);
+  color: $btnbg;
   background: $tabsitem;
+  cursor: pointer;
   transition: all .3s;
 
   &:after {
@@ -56,37 +59,24 @@
   }
 
   &:hover {
+    color: $linecolor;
     background: $nextbtnbg;
 
     &:after {
       border-top-color: $nextbtnbg;
     }
-
-    .tabs__link {
-      color: $linecolor;
-    }
   }
 
   &:active {
-    .tabs__link {
-      color: $nextbtnbg;
-    }
+    color: $nextbtnbg;
   }
-}
-
-.tabs__link {
-  @include font();
-  display: block;
-  height: 100%;
-  padding: rem(10px) 0;
-  color: $btnbg;
-  transition: all .3s;
 }
 
 .trending__products-page {
   padding: rem(25px) 0;
   text-align: center;
   background: $assortmentbg;
+  animation: fadeIn 1.5s;
 
   .btn {
     padding: rem(25px) rem(60px);
@@ -285,4 +275,8 @@
 
 .color-blue {
   background: $cblue;
+}
+
+.trending__products-page {
+  display: none;
 }

@@ -38,6 +38,28 @@ function initMap() {
     });
 }
 
+//----------------------<<tabs (native js)>>----------------------\\
+    function openList(e, listName) {
+
+        var i, tabcontent, tablinks;
+    
+        tabcontent = document.getElementsByClassName("trending__products-page");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        tablinks = document.getElementsByClassName("tabs__button");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        document.getElementById(listName).style.display = "block";
+        e.currentTarget.className += " active";
+    }
+
+    document.getElementById("defaultOpen").click();
+
+
 $(document).ready(function () {
 
     //----------------------<<svg for ie>>----------------------\\
@@ -82,6 +104,7 @@ $(document).ready(function () {
         e.preventDefault();
 
         sidebarAnimate(350);
+        $('.dark-bg').fadeIn(500);
 
     });
 
@@ -90,6 +113,7 @@ $(document).ready(function () {
         e.preventDefault();
 
         sidebarAnimate(0);
+        $('.dark-bg').fadeOut(500);
 
     });
 
@@ -133,5 +157,9 @@ $(document).ready(function () {
             }
         });
     });
+
+
+
+
 
 });

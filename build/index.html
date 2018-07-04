@@ -274,6 +274,7 @@
                 </svg>
             </div>
         </div>
+        <div class="dark-bg"></div>
         <aside class="basket">
             <div class="basket__head">
                 <h1 class="title">Shopping Cart</h1>
@@ -463,16 +464,185 @@
             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
             laborum.
         </div>
-        <ul class="tabs">
-            <li class="tabs__item active">
-                <a href="#" class="tabs__link">New products</a></li>
-            <li class="tabs__item">
-                <a href="#" class="tabs__link">Prices drop</a></li>
-            <li class="tabs__item">
-                <a href="#" class="tabs__link">Best sales</a></li>
-        </ul>
+        <div class="tabs">
+            <button id="defaultOpen" class="tabs__button active" onclick="openList(event, 'new')">New products</button>
+            <button class="tabs__button" onclick="openList(event, 'prices')">Prices drop</button>
+            <button class="tabs__button" onclick="openList(event, 'sales')">Best sales</button>
+        </div>
         <ul class="trending__products">
-            <li class="trending__products-page">
+            <li id="new" class="trending__products-page">
+                <ul class="products__list">
+                    <li class="products__item">
+                        <div class="products__img">
+                            <img src="assets/img/trendings/shirt.jpg" alt="Product">
+                            <div class="products__img-hover"></div>
+                            <a href="#" class="btn btn_left">Quick view</a>
+                            <a href="#" class="btn btn_right">More details</a>
+                        </div>
+                        <div class="title">Excepteur sint occaecat cupidatat</div>
+                        <div class="desc">$ 199.00</div>
+                        <div class="products__colors">
+                            <a href="#" class="color-red"></a>
+                            <a href="#" class="color-orange"></a>
+                            <a href="#" class="color-green active"></a>
+                            <a href="#" class="color-blue"></a>
+                        </div>
+                    </li>
+                    <li class="products__item">
+                        <div class="products__img">
+                            <img src="assets/img/trendings/trendings1.jpg" alt="Product">
+                            <div class="products__img-hover"></div>
+                            <a href="#" class="btn btn_left">Quick view</a>
+                            <a href="#" class="btn btn_right">More details</a>
+                            <div class="label new">New</div>
+                            <div class="label discount">20%</div>
+                        </div>
+                        <div class="title">Excepteur sint occaecat cupidatat</div>
+                        <div class="desc">$ 159.00</div>
+                        <div class="desc old-price">$ 199.00</div>
+                        <div class="products__colors">
+                            <a href="#" class="color-red"></a>
+                            <a href="#" class="color-orange"></a>
+                            <a href="#" class="color-green active"></a>
+                            <a href="#" class="color-blue"></a>
+                        </div>
+                    </li>
+                    <li class="products__item">
+                        <div class="products__img">
+                            <img src="assets/img/trendings/trendings1.jpg" alt="Product">
+                            <div class="products__img-hover"></div>
+                            <a href="#" class="btn btn_left">Quick view</a>
+                            <a href="#" class="btn btn_right">More details</a>
+                        </div>
+                        <div class="title">Excepteur sint occaecat cupidatat</div>
+                        <div class="desc">$ 199.00</div>
+                        <div class="products__colors">
+                            <a href="#" class="color-red"></a>
+                            <a href="#" class="color-orange"></a>
+                            <a href="#" class="color-green active"></a>
+                            <a href="#" class="color-blue"></a>
+                        </div>
+                    </li>
+                    <li class="products__item">
+                        <div class="products__img">
+                            <img src="assets/img/trendings/trendings1.jpg" alt="Product">
+                            <div class="products__img-hover"></div>
+                            <a href="#" class="btn btn_left">Quick view</a>
+                            <a href="#" class="btn btn_right">More details</a>
+                            <div class="label discount">50%</div>
+                        </div>
+                        <div class="title">Excepteur sint occaecat cupidatat</div>
+                        <div class="desc">$ 99.00</div>
+                        <div class="desc old-price">$ 199.00</div>
+                        <div class="products__colors">
+                            <a href="#" class="color-red"></a>
+                            <a href="#" class="color-orange"></a>
+                            <a href="#" class="color-green active"></a>
+                            <a href="#" class="color-blue"></a>
+                        </div>
+                    </li>
+                    <li class="products__item">
+                        <div class="products__img">
+                            <img src="assets/img/trendings/trendings1.jpg" alt="Product">
+                            <div class="products__img-hover"></div>
+                            <a href="#" class="btn btn_left">Quick view</a>
+                            <a href="#" class="btn btn_right">More details</a>
+                        </div>
+                        <div class="title">Excepteur sint occaecat cupidatat</div>
+                        <div class="desc">$ 199.00</div>
+                        <div class="products__colors">
+                            <a href="#" class="color-red"></a>
+                            <a href="#" class="color-orange"></a>
+                            <a href="#" class="color-green active"></a>
+                            <a href="#" class="color-blue"></a>
+                        </div>
+                    </li>
+
+                    <li class="products__item">
+                        <div class="products__img">
+                            <img src="assets/img/trendings/trendings1.jpg" alt="Product">
+                            <div class="products__img-hover"></div>
+                            <a href="#" class="btn btn_left">Quick view</a>
+                            <a href="#" class="btn btn_right">More details</a>
+                        </div>
+                        <div class="title">Excepteur sint occaecat cupidatat</div>
+                        <div class="desc">$ 199.00</div>
+                        <div class="products__colors">
+                            <a href="#" class="color-red"></a>
+                            <a href="#" class="color-orange"></a>
+                            <a href="#" class="color-green active"></a>
+                            <a href="#" class="color-blue"></a>
+                        </div>
+                    </li>
+                    <li class="products__item">
+                        <div class="products__img">
+                            <img src="assets/img/trendings/trendings1.jpg" alt="Product">
+                            <div class="products__img-hover"></div>
+                            <a href="#" class="btn btn_left">Quick view</a>
+                            <a href="#" class="btn btn_right">More details</a>
+                        </div>
+                        <div class="title">Excepteur sint occaecat cupidatat</div>
+                        <div class="desc">$ 199.00</div>
+                        <div class="products__colors">
+                            <a href="#" class="color-red"></a>
+                            <a href="#" class="color-orange"></a>
+                            <a href="#" class="color-green active"></a>
+                            <a href="#" class="color-blue"></a>
+                        </div>
+                    </li>
+                    <li class="products__item">
+                        <div class="products__img">
+                            <img src="assets/img/trendings/trendings1.jpg" alt="Product">
+                            <div class="products__img-hover"></div>
+                            <a href="#" class="btn btn_left">Quick view</a>
+                            <a href="#" class="btn btn_right">More details</a>
+                        </div>
+                        <div class="title">Excepteur sint occaecat cupidatat</div>
+                        <div class="desc">$ 199.00</div>
+                        <div class="products__colors">
+                            <a href="#" class="color-red"></a>
+                            <a href="#" class="color-orange"></a>
+                            <a href="#" class="color-green active"></a>
+                            <a href="#" class="color-blue"></a>
+                        </div>
+                    </li>
+                    <li class="products__item">
+                        <div class="products__img">
+                            <img src="assets/img/trendings/trendings1.jpg" alt="Product">
+                            <div class="products__img-hover"></div>
+                            <a href="#" class="btn btn_left">Quick view</a>
+                            <a href="#" class="btn btn_right">More details</a>
+                        </div>
+                        <div class="title">Excepteur sint occaecat cupidatat</div>
+                        <div class="desc">$ 199.00</div>
+                        <div class="products__colors">
+                            <a href="#" class="color-red"></a>
+                            <a href="#" class="color-orange"></a>
+                            <a href="#" class="color-green active"></a>
+                            <a href="#" class="color-blue"></a>
+                        </div>
+                    </li>
+                    <li class="products__item">
+                        <div class="products__img">
+                            <img src="assets/img/trendings/trendings1.jpg" alt="Product">
+                            <div class="products__img-hover"></div>
+                            <a href="#" class="btn btn_left">Quick view</a>
+                            <a href="#" class="btn btn_right">More details</a>
+                        </div>
+                        <div class="title">Excepteur sint occaecat cupidatat</div>
+                        <div class="desc">$ 199.00</div>
+                        <div class="products__colors">
+                            <a href="#" class="color-red"></a>
+                            <a href="#" class="color-orange"></a>
+                            <a href="#" class="color-green active"></a>
+                            <a href="#" class="color-blue"></a>
+                        </div>
+                    </li>
+
+                </ul>
+                <a href="#" class="btn">All products</a>
+            </li>
+            <li id="prices" class="trending__products-page">
                 <ul class="products__list">
                     <li class="products__item">
                         <div class="products__img">
@@ -644,18 +814,162 @@
                 </ul>
                 <a href="#" class="btn">All products</a>
             </li>
-            <!--<li class="trending__products-page">-->
-                <!--<ul class="products__list">-->
-                    <!--<li class="products__item"></li>-->
-                <!--</ul>-->
-                <!--<a href="#" class="btn"></a>-->
-            <!--</li>-->
-            <!--<li class="trending__products-page">-->
-                <!--<ul class="products__list">-->
-                    <!--<li class="products__item"></li>-->
-                <!--</ul>-->
-                <!--<a href="#" class="btn"></a>-->
-            <!--</li>-->
+            <li id="sales" class="trending__products-page">
+                <ul class="products__list">
+                    <li class="products__item">
+                        <div class="products__img">
+                            <img src="assets/img/trendings/trendings1.jpg" alt="Product">
+                            <div class="products__img-hover"></div>
+                            <a href="#" class="btn btn_left">Quick view</a>
+                            <a href="#" class="btn btn_right">More details</a>
+                            <div class="label new">New</div>
+                            <div class="label discount">20%</div>
+                        </div>
+                        <div class="title">Excepteur sint occaecat cupidatat</div>
+                        <div class="desc">$ 159.00</div>
+                        <div class="desc old-price">$ 199.00</div>
+                        <div class="products__colors">
+                            <a href="#" class="color-red"></a>
+                            <a href="#" class="color-orange"></a>
+                            <a href="#" class="color-green active"></a>
+                            <a href="#" class="color-blue"></a>
+                        </div>
+                    </li>
+                    <li class="products__item">
+                        <div class="products__img">
+                            <img src="assets/img/trendings/trendings1.jpg" alt="Product">
+                            <div class="products__img-hover"></div>
+                            <a href="#" class="btn btn_left">Quick view</a>
+                            <a href="#" class="btn btn_right">More details</a>
+                            <div class="label discount">50%</div>
+                        </div>
+                        <div class="title">Excepteur sint occaecat cupidatat</div>
+                        <div class="desc">$ 99.00</div>
+                        <div class="desc old-price">$ 199.00</div>
+                        <div class="products__colors">
+                            <a href="#" class="color-red"></a>
+                            <a href="#" class="color-orange"></a>
+                            <a href="#" class="color-green active"></a>
+                            <a href="#" class="color-blue"></a>
+                        </div>
+                    </li>
+                    <li class="products__item">
+                        <div class="products__img">
+                            <img src="assets/img/trendings/shirt.jpg" alt="Product">
+                            <div class="products__img-hover"></div>
+                            <a href="#" class="btn btn_left">Quick view</a>
+                            <a href="#" class="btn btn_right">More details</a>
+                        </div>
+                        <div class="title">Excepteur sint occaecat cupidatat</div>
+                        <div class="desc">$ 199.00</div>
+                        <div class="products__colors">
+                            <a href="#" class="color-red"></a>
+                            <a href="#" class="color-orange"></a>
+                            <a href="#" class="color-green active"></a>
+                            <a href="#" class="color-blue"></a>
+                        </div>
+                    </li>
+                    <li class="products__item">
+                        <div class="products__img">
+                            <img src="assets/img/trendings/trendings1.jpg" alt="Product">
+                            <div class="products__img-hover"></div>
+                            <a href="#" class="btn btn_left">Quick view</a>
+                            <a href="#" class="btn btn_right">More details</a>
+                        </div>
+                        <div class="title">Excepteur sint occaecat cupidatat</div>
+                        <div class="desc">$ 199.00</div>
+                        <div class="products__colors">
+                            <a href="#" class="color-red"></a>
+                            <a href="#" class="color-orange"></a>
+                            <a href="#" class="color-green active"></a>
+                            <a href="#" class="color-blue"></a>
+                        </div>
+                    </li>
+
+                    <li class="products__item">
+                        <div class="products__img">
+                            <img src="assets/img/trendings/trendings1.jpg" alt="Product">
+                            <div class="products__img-hover"></div>
+                            <a href="#" class="btn btn_left">Quick view</a>
+                            <a href="#" class="btn btn_right">More details</a>
+                        </div>
+                        <div class="title">Excepteur sint occaecat cupidatat</div>
+                        <div class="desc">$ 199.00</div>
+                        <div class="products__colors">
+                            <a href="#" class="color-red"></a>
+                            <a href="#" class="color-orange"></a>
+                            <a href="#" class="color-green active"></a>
+                            <a href="#" class="color-blue"></a>
+                        </div>
+                    </li>
+                    <li class="products__item">
+                        <div class="products__img">
+                            <img src="assets/img/trendings/trendings1.jpg" alt="Product">
+                            <div class="products__img-hover"></div>
+                            <a href="#" class="btn btn_left">Quick view</a>
+                            <a href="#" class="btn btn_right">More details</a>
+                        </div>
+                        <div class="title">Excepteur sint occaecat cupidatat</div>
+                        <div class="desc">$ 199.00</div>
+                        <div class="products__colors">
+                            <a href="#" class="color-red"></a>
+                            <a href="#" class="color-orange"></a>
+                            <a href="#" class="color-green active"></a>
+                            <a href="#" class="color-blue"></a>
+                        </div>
+                    </li>
+                    <li class="products__item">
+                        <div class="products__img">
+                            <img src="assets/img/trendings/trendings1.jpg" alt="Product">
+                            <div class="products__img-hover"></div>
+                            <a href="#" class="btn btn_left">Quick view</a>
+                            <a href="#" class="btn btn_right">More details</a>
+                        </div>
+                        <div class="title">Excepteur sint occaecat cupidatat</div>
+                        <div class="desc">$ 199.00</div>
+                        <div class="products__colors">
+                            <a href="#" class="color-red"></a>
+                            <a href="#" class="color-orange"></a>
+                            <a href="#" class="color-green active"></a>
+                            <a href="#" class="color-blue"></a>
+                        </div>
+                    </li>
+                    <li class="products__item">
+                        <div class="products__img">
+                            <img src="assets/img/trendings/trendings1.jpg" alt="Product">
+                            <div class="products__img-hover"></div>
+                            <a href="#" class="btn btn_left">Quick view</a>
+                            <a href="#" class="btn btn_right">More details</a>
+                        </div>
+                        <div class="title">Excepteur sint occaecat cupidatat</div>
+                        <div class="desc">$ 199.00</div>
+                        <div class="products__colors">
+                            <a href="#" class="color-red"></a>
+                            <a href="#" class="color-orange"></a>
+                            <a href="#" class="color-green active"></a>
+                            <a href="#" class="color-blue"></a>
+                        </div>
+                    </li>
+                    <li class="products__item">
+                        <div class="products__img">
+                            <img src="assets/img/trendings/trendings1.jpg" alt="Product">
+                            <div class="products__img-hover"></div>
+                            <a href="#" class="btn btn_left">Quick view</a>
+                            <a href="#" class="btn btn_right">More details</a>
+                        </div>
+                        <div class="title">Excepteur sint occaecat cupidatat</div>
+                        <div class="desc">$ 199.00</div>
+                        <div class="products__colors">
+                            <a href="#" class="color-red"></a>
+                            <a href="#" class="color-orange"></a>
+                            <a href="#" class="color-green active"></a>
+                            <a href="#" class="color-blue"></a>
+                        </div>
+                    </li>
+
+                </ul>
+                <a href="#" class="btn">All products</a>
+            </li>
         </ul>
     </section>
 
