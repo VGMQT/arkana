@@ -73,6 +73,7 @@
 }
 
 .trending__products-page {
+  display: none;
   padding: rem(25px) 0;
   text-align: center;
   background: $assortmentbg;
@@ -145,14 +146,6 @@
   height: rem(460px);
   margin-bottom: rem(15px);
 
-  img {
-    @extend %img;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
   .btn {
     position: absolute;
     bottom: 0;
@@ -178,6 +171,32 @@
     }
   }
 }
+
+.products__img-slide {
+  display: none;
+  animation-name: slideFade;
+  animation-duration: 1.5s;
+
+  img {
+    @extend %img;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.products__img-static {
+  img {
+    @extend %img;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+
 
 .btn_left {
   left: -9999px;
@@ -238,14 +257,12 @@
   }
 }
 
-.color-red,
-.color-orange,
-.color-green,
-.color-blue {
+.color {
   display: inline-block;
   width: 20px;
   height: 20px;
   margin-right: rem(7px);
+  cursor: pointer;
   transition: all .3s;
 
   &:hover {
@@ -275,8 +292,4 @@
 
 .color-blue {
   background: $cblue;
-}
-
-.trending__products-page {
-  display: none;
 }

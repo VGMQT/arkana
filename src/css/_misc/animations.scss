@@ -42,3 +42,12 @@
     opacity: 1;
   }
 }
+
+@keyframes slideFade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}

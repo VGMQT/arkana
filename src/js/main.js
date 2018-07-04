@@ -39,25 +39,50 @@ function initMap() {
 }
 
 //----------------------<<tabs (native js)>>----------------------\\
-    function openList(e, listName) {
+function openList(e, listName) {
 
-        var i, tabcontent, tablinks;
-    
-        tabcontent = document.getElementsByClassName("trending__products-page");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-        }
+    var i, tabcontent, tablinks;
 
-        tablinks = document.getElementsByClassName("tabs__button");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-
-        document.getElementById(listName).style.display = "block";
-        e.currentTarget.className += " active";
+    tabcontent = document.getElementsByClassName("trending__products-page");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
     }
 
-    document.getElementById("defaultOpen").click();
+    tablinks = document.getElementsByClassName("tabs__button");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    document.getElementById(listName).style.display = "block";
+    e.currentTarget.className += " active";
+}
+
+document.getElementById("defaultOpen").click();
+
+//----------------------<<slideshow (native js)>>----------------------\\
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    let i;
+    const slides = document.getElementsByClassName("products__img-slide");
+    const dots = document.getElementsByClassName("color");
+    if (n > slides.length) {slideIndex = 1} 
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block"; 
+    dots[slideIndex-1].className += " active";
+}
+
 
 
 $(document).ready(function () {
