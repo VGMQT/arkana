@@ -33,10 +33,6 @@
   &:active {
     transform: none;
   }
-
-  &:first-child {
-    margin-right: rem(25px);
-  }
 }
 
 .header__svg {
@@ -61,7 +57,7 @@
   @include font(medium);
   position: absolute;
   right: -5px;
-  bottom: 2px;
+  bottom: -4px;
   width: 15px;
   height: 15px;
   padding-top: 1px;

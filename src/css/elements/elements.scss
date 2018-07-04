@@ -3,7 +3,7 @@
 }
 
 .container-sm {
-  max-width: 1120px;
+  max-width: $containersm;
   margin: 0 auto;
 }
 
@@ -12,6 +12,7 @@
   padding-bottom: rem(15px);
   font-size: rem(56px);
   color: $maincolor;
+  transition: all .3s;
 }
 
 .desc {
@@ -19,6 +20,7 @@
   padding-bottom: rem(50px);
   font-size: rem(13px);
   color: $desccolor;
+  transition: all .3s;
 }
 
 .btn {
@@ -39,4 +41,10 @@
     color: $btnbg;
     background: $btntext;
   }
+}
+
+.old-price {
+  display: inline-block;
+  text-decoration: line-through;
+  font-size: rem(13px);
 }

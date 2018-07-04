@@ -54,5 +54,26 @@ $(document).ready(function () {
             type: 'bullets',
             clickable: true
         }
-    })
+    });
+
+    //----------------------<<menu link hover>>----------------------\\
+    $(".menu-categories__link").on({
+    
+        mouseenter: function(){
+
+            const $this = $(this);
+
+            $this.addClass('active')
+                .siblings()
+                .removeClass('active');
+        },
+
+        "mouseleave click": function(){
+
+            const $this = $(this);
+
+            $this.removeClass('active');
+        }
+    });
+
 });

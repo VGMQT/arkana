@@ -3,17 +3,13 @@
   cursor: pointer;
 
   &:hover {
+    .header__head-link {
+      transform: scale(1.2);
+    }
     .search__dropdown-form {
       left: 0;
       opacity: 1;
     }
-    .header__head-link {
-      transform: scale(1.2);
-    }
-  }
-
-  .header__head-link {
-    margin-right: 0;
   }
 }
 
