@@ -57,4 +57,16 @@
       color: $btnbg;
     }
   }
+
+  @include desktop {
+    padding: rem(30px) rem(30px);
+
+    .title {
+      padding-bottom: rem(50px);
+
+      &:after {
+        bottom: rem(30px);
+      }
+    }
+  }
 }

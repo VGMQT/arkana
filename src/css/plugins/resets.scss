@@ -61,6 +61,10 @@
 
 .swiper-container-horizontal > .swiper-pagination-bullets {
   left: 401px;
+
+  @include desktop {
+    left: 210px;
+  }
 }
 
 .swiper-pagination-bullet {

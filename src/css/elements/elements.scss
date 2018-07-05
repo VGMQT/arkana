@@ -2,11 +2,6 @@
   background: $btntext;
 }
 
-.container-sm {
-  max-width: $containersm;
-  margin: 0 auto;
-}
-
 .title {
   @include font();
   @include trans();

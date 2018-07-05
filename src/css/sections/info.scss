@@ -83,6 +83,10 @@
   &:focus {
     border-color: $btnbg;
   }
+
+  @include desktop {
+    padding-right: rem(90px);
+  }
 }
 
 .socials__submit {
@@ -105,6 +109,10 @@
 
   &:active {
     color: $btntext;
+  }
+
+  @include desktop {
+    padding: rem(10px) rem(10px);
   }
 }
 

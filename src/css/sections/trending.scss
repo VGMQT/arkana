@@ -185,6 +185,8 @@
 }
 
 .products__img-static {
+  // display: none;
+
   img {
     @extend %img;
     position: absolute;

@@ -26,6 +26,14 @@
   .desc {
     padding-bottom: 0;
   }
+
+  @include desktop {
+    margin-right: rem(30px);
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .pros__svg {

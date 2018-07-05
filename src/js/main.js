@@ -90,7 +90,29 @@ function showSlides(n) {
 }
 
 
+//-------------------------//dataset//-------------------------//
+// function myFunc(ev, slideId){
+//     console.log(slideId);
 
+//     var i, tabcontent, tablinks;
+
+//     tabcontent = document.getElementsByClassName("products__img-static");
+//     for (i = 0; i < tabcontent.length; i++) {
+//         tabcontent[i].style.display = "none";
+//     }
+
+//     tablinks = document.getElementsByClassName("color");
+//     for (i = 0; i < tablinks.length; i++) {
+//         tablinks[i].className = tablinks[i].className.replace(" active", "");
+//     }
+
+//     document.getElementById(slideId).style.display = "block";
+//     ev.currentTarget.className += " active";
+// }
+
+// document.getElementById("dot1").click();
+
+//-------------------------//document ready functions//-------------------------//
 $(document).ready(function () {
 
     //-------------------------//svg for IE//-------------------------//

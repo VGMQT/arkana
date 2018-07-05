@@ -30,6 +30,10 @@
       padding-bottom: 0;
     }
   }
+
+  @include desktop {
+    left: 5%;
+  }
 }
 
 .map__svg {

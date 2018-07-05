@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">-->
-    <meta name="viewport" content="width=1920">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!-- <meta name="viewport" content="width=1920"> -->
 
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.min.css">
@@ -530,16 +530,16 @@
                     <li class="products__item">
                         <div class="products__img">
 
-                            <div class="products__img-static">
+                            <div id="slide1" class="products__img-static">
                                 <img src="assets/img/trendings/trend2.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div id="slide2" class="products__img-static">
                                 <img src="assets/img/trendings/trend3.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div id="slide3" class="products__img-static">
                                 <img src="assets/img/trendings/trend4.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div id="slide4" class="products__img-static">
                                 <img src="assets/img/trendings/trend5.jpg" alt="Product">
                             </div>
 
@@ -550,10 +550,10 @@
                         <h2 class="title">Excepteur sint occaecat cupidatat</h2>
                         <span class="desc">$ 199.00</span>
                         <ul class="products__colors">
-                            <li class="color color_red"></li>
-                            <li class="color color_orange"></li>
-                            <li class="color color_green"></li>
-                            <li class="color color_blue"></li>
+                            <li id="dot1" class="color color_red" data-slide="slide1" onclick="myFunc(event, this.dataset.slide)"></li>
+                            <li class="color color_orange" data-slide="slide2" onclick="myFunc(event, this.dataset.slide)"></li>
+                            <li class="color color_green" data-slide="slide3" onclick="myFunc(event, this.dataset.slide)"></li>
+                            <li class="color color_blue" data-slide="slide4" onclick="myFunc(event, this.dataset.slide)"></li>
                         </ul>
                     </li>
                     <li class="products__item">

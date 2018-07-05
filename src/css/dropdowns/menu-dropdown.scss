@@ -35,6 +35,10 @@
     height: 160px;
     content: "";
   }
+
+  @include desktop {
+    width: 800px;
+  }
 }
 
 .menu-categories {
@@ -42,6 +46,11 @@
   width: 30%;
   padding: rem(35px) rem(30px);
   border-right: 1px solid $linecolor;
+
+  @include desktop {
+    min-width: 0;
+    width: 25%;
+  }
 }
 
 .menu-categories__item {
@@ -58,6 +67,14 @@
 
   &:nth-child(even) {
     margin-right: 0;
+  }
+
+  @include desktop {
+    margin-right: 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -105,7 +122,7 @@
 
 .menu-preview {
   position: relative;
-  width: 50%;
+  width: 45%;
   padding: rem(35px) rem(30px);
   border-right: 1px solid $linecolor;
 }
@@ -178,6 +195,10 @@
 .menu-logos {
   width: 20%;
   padding: rem(35px) rem(30px);
+
+  @include desktop {
+    width: 30%;
+  }
 }
 
 .menu-logos__item {
@@ -193,6 +214,7 @@
   display: block;
   width: rem(160px);
   height: rem(50px);
+  margin: auto;
 
   &:hover {
     transform: scale(1.1);

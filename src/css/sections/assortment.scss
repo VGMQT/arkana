@@ -8,6 +8,10 @@
   justify-content: space-between;
   align-items: center;
   margin: auto;
+
+  @include desktop {
+    justify-content: space-evenly;
+  }
 }
 
 .assortment__item {

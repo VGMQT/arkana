@@ -26,4 +26,8 @@
   &:last-child {
     margin-right: 0;
   }
+
+  @include desktop {
+    margin-right: rem(50px);
+  }
 }
