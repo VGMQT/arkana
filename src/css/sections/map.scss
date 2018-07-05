@@ -38,4 +38,14 @@
   bottom: 25px;
   width: rem(30px);
   height: rem(30px);
+  cursor: pointer;
+  transition: all .3s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &:active {
+    transform: none;
+  }
 }

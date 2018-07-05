@@ -1,16 +1,19 @@
 //----------------------<<google map>>----------------------\\
 function initMap() {
-    const myLatLng = {lat: 40.798054, lng: -74.064936};
 
-    const style = [
-        {
-          featureType: "all",
-          elementType: "all",
-          stylers: [
-            { saturation: -100 }
-          ]
-        }
-    ];
+    const myLatLng = {
+        lat: 40.798054, lng: -74.064936
+    };
+
+    const infoMarker = document.getElementById('infoMarker');
+
+    const myStyle = [{
+        featureType: "all",
+        elementType: "all",
+        stylers: [{
+            saturation: -100
+        }]
+    }];
 
     const map = new google.maps.Map(document.getElementById('map'), {
         center: myLatLng,
@@ -22,9 +25,12 @@ function initMap() {
        }
     });
 
-    const mapType = new google.maps.StyledMapType(style, { name:"Greyscale" });
-          map.mapTypes.set('tehgrey', mapType);
-          map.setMapTypeId('tehgrey');
+    const mapType = new google.maps.StyledMapType(myStyle, {
+        name:"Greyscale"
+    });
+
+    map.mapTypes.set('tehgrey', mapType);
+    map.setMapTypeId('tehgrey');
 
     const marker = new google.maps.Marker({
         position: myLatLng,
@@ -33,10 +39,10 @@ function initMap() {
         icon: "assets/img/svg/marker.svg"
     });
 
-    marker.addListener('click', function() {
-        infowindow.open(map, marker);
-    });
-}
+    infoMarker.onclick = function() {
+        map.setCenter(myLatLng);
+    };
+};
 
 //----------------------<<tabs (native js)>>----------------------\\
 function openList(e, listName) {
@@ -79,7 +85,7 @@ function showSlides(n) {
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
-    slides[slideIndex-1].style.display = "block"; 
+    slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
 }
 
