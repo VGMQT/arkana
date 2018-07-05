@@ -13,10 +13,10 @@
   position: absolute;
   top: 50%;
   left: 20%;
-  margin-top: rem(-100px);
   width: rem(330px);
   height: rem(200px);
   padding: rem(35px);
+  margin-top: rem(-100px);
   box-shadow: 0 10px 25px rgba(1, 2, 3, .15);
   background: $btntext;
 
@@ -33,13 +33,13 @@
 }
 
 .map__svg {
+  @include trans();
   position: absolute;
   right: 15px;
   bottom: 25px;
   width: rem(30px);
   height: rem(30px);
   cursor: pointer;
-  transition: all .3s;
 
   &:hover {
     transform: scale(1.2);

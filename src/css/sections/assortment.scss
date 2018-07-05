@@ -33,12 +33,14 @@
     position: absolute;
     bottom: 20px;
     left: 50%;
-    margin-left: rem(-125px);
     width: rem(250px);
     height: rem(65px);
+    margin-left: rem(-125px);
     text-align: center;
+    border: none;
     color: $btnbg;
     background: $btntext;
+    cursor: pointer;
 
     &:hover {
       color: $btntext;

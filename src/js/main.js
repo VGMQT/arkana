@@ -1,4 +1,4 @@
-//----------------------<<google map>>----------------------\\
+//-------------------------//google map//-------------------------//
 function initMap() {
 
     const myLatLng = {
@@ -44,7 +44,7 @@ function initMap() {
     };
 };
 
-//----------------------<<tabs (native js)>>----------------------\\
+//-------------------------//tabs (native js)//-------------------------//
 function openList(e, listName) {
 
     var i, tabcontent, tablinks;
@@ -65,7 +65,7 @@ function openList(e, listName) {
 
 document.getElementById("defaultOpen").click();
 
-//----------------------<<slideshow (native js)>>----------------------\\
+//-------------------------//slideshow (native js)//-------------------------//
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -93,9 +93,10 @@ function showSlides(n) {
 
 $(document).ready(function () {
 
-    //----------------------<<svg for ie>>----------------------\\
+    //-------------------------//svg for IE//-------------------------//
     svg4everybody();
-
+    
+    //-------------------------//swiper//-------------------------//
     const mySwiper = new Swiper ('.swiper-container', {
         loop: true,
         navigation: {
@@ -109,27 +110,7 @@ $(document).ready(function () {
         }
     });
 
-    //----------------------<<menu link hover>>----------------------\\
-    // $(".menu-categories__link").on({
-    
-    //     mouseenter: function(){
-
-    //         const $this = $(this);
-
-    //         $this.addClass('active')
-    //             .siblings()
-    //             .removeClass('active');
-    //     },
-
-    //     "mouseleave click": function(){
-
-    //         const $this = $(this);
-
-    //         $this.removeClass('active');
-    //     }
-    // });
-
-    //----------------------<<basket sidebar>>----------------------\\
+    //-------------------------//basket sidebar//-------------------------//
     $('#basket-trigger').on('click', function (e) {
 
         e.preventDefault();
@@ -166,8 +147,7 @@ $(document).ready(function () {
         }
     }
 
-    //----------------------<<sidebar checkbox>>----------------------\\
-
+    //-------------------------//sidebar checkbox//-------------------------//
     $('.basket__products-close').on('click', function (e) {
         e.preventDefault();
 
@@ -188,9 +168,5 @@ $(document).ready(function () {
             }
         });
     });
-
-
-
-
 
 });

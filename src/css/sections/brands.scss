@@ -9,8 +9,8 @@
 }
 
 .brands__link {
+  @include trans();
   display: block;
-  transition: all .3s;
 
   &:hover {
     transform: scale(1.2);

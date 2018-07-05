@@ -2,8 +2,8 @@
   padding: $secpad 0;
 
   .title {
-    font-size: rem(42px);
     text-align: center;
+    font-size: rem(42px);
   }
 
   .desc {
@@ -30,21 +30,22 @@
 
 .tabs__button {
   @include font();
+  @include trans();;
   position: relative;
   display: inline-block;
   vertical-align: middle;
   width: rem(140px);
   padding: rem(10px) 0;
   margin-right: rem(20px);
+  font-size: rem(14px);
   outline: none;
   border: none;
-  font-size: rem(14px);
   color: $btnbg;
   background: $tabsitem;
   cursor: pointer;
-  transition: all .3s;
 
   &:after {
+    @include trans();
     position: absolute;
     top: 90%;
     left: 50%;
@@ -52,10 +53,9 @@
     height: 0;
     margin-left: rem(-15px);
     border: rem(15px) solid transparent;
-    border-bottom: 0;
     border-top-color: $tabsitem;
+    border-bottom: 0;
     content: "";
-    transition: all .3s;
   }
 
   &:hover {
@@ -136,7 +136,6 @@
     padding-bottom: 0;
     margin-right: rem(10px);
     font-size: rem(16px);
-    transition: all .3s;
   }
 }
 
@@ -150,11 +149,11 @@
     position: absolute;
     bottom: 0;
     z-index: 1;
-    padding: rem(18px) 0;
-    margin: rem(15px);
     display: inline-block;
     width: rem(150px);
     height: 50px;
+    padding: rem(18px) 0;
+    margin: rem(15px);
     font-size: rem(11px);
     color: $btnbg;
     background: $btntext;
@@ -174,8 +173,7 @@
 
 .products__img-slide {
   display: none;
-  animation-name: slideFade;
-  animation-duration: 1.5s;
+  animation: slideFade 1.5s;
 
   img {
     @extend %img;
@@ -235,19 +233,20 @@
   left: 0;
   color: $btntext;
   background: $discount;
+
   &:before {
     content: "-";
   }
 }
 
 .products__colors {
+  @include trans();
   position: absolute;
   bottom: 0;
   left: rem(120px);
   text-align: center;
   font-size: 0;
   opacity: 0;
-  transition: all .3s;
 
   .active {
     margin-left: rem(5px);
@@ -258,12 +257,12 @@
 }
 
 .color {
+  @include trans();
   display: inline-block;
   width: 20px;
   height: 20px;
   margin-right: rem(7px);
   cursor: pointer;
-  transition: all .3s;
 
   &:hover {
     transform: scale(1.4);
@@ -278,18 +277,18 @@
   }
 }
 
-.color-red {
+.color_red {
   background: $cred;
 }
 
-.color-orange {
+.color_orange {
   background: $corange;
 }
 
-.color-green {
+.color_green {
   background: $cgreen;
 }
 
-.color-blue {
+.color_blue {
   background: $cblue;
 }

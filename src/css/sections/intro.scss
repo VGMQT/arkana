@@ -2,8 +2,7 @@
   position: relative;
   padding: $secpad 0;
   background: url("../assets/img/intro/intro-bg.png") center no-repeat;
-  -webkit-background-size: cover;
-          background-size: cover;
+  background-size: cover;
 
   .desc {
     max-width: 370px;

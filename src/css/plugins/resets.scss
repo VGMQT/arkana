@@ -5,17 +5,15 @@
 
 .swiper-button-pr,
 .swiper-button-nx {
+  @include trans();
   position: absolute;
   top: 50%;
+  z-index: 10;
   width: rem(60px);
   height: rem(60px);
-  z-index: 10;
   border: 3px solid $btntext;
-  -webkit-border-radius: 50%;
-     -moz-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   cursor: pointer;
-  transition: all .3s;
 }
 
 .swiper-button-pr {
@@ -47,6 +45,7 @@
 }
 
 .swiper__svg {
+  @include trans();
   position: absolute;
   top: 50%;
   left: 50%;
@@ -54,7 +53,6 @@
   width: 25px;
   height: 25px;
   fill: $sliderbtn;
-  transition: all .3s;
 }
 
 .swiper-pagination {
@@ -66,12 +64,10 @@
 }
 
 .swiper-pagination-bullet {
-  -webkit-border-radius: 0;
-     -moz-border-radius: 0;
-          border-radius: 0;
+  @include trans();
+  border-radius: 0;
   background: $btntext;
   opacity: 1;
-  transition: all .3s;
 
   &:hover {
     background: $nextbtnbg;

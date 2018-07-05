@@ -33,13 +33,13 @@
 }
 
 .socials__link {
+  @include trans();
   position: relative;
   display: block;
   width: rem(40px);
   height: rem(40px);
   border-radius: 50%;
   background: $socialsbg;
-  transition: all .3s;
 
   &:hover {
     background: $btnbg;
@@ -57,6 +57,7 @@
 }
 
 .socials__svg {
+  @include trans();
   position: absolute;
   top: 50%;
   left: 50%;
@@ -64,7 +65,6 @@
   width: rem(15px);
   height: rem(15px);
   fill: $socialssvg;
-  transition: all .3s;
 }
 
 .socials__form {
@@ -73,12 +73,12 @@
 
 .socials__input {
   @include font();
+  @include trans();
   width: 100%;
   padding: rem(20px) rem(120px) rem(20px) rem(20px);
-  border: 1px solid $inputborder;
-  outline: none;
   font-size: rem(12px);
-  transition: all .3s;
+  outline: none;
+  border: 1px solid $inputborder;
 
   &:focus {
     border-color: $btnbg;
@@ -90,10 +90,10 @@
   position: absolute;
   top: 50%;
   right: 1px;
-  margin-top: rem(-16px);
   padding: rem(10px) rem(20px);
-  border: none;
+  margin-top: rem(-16px);
   outline: none;
+  border: none;
   color: $btnbg;
   background: $btntext;
   cursor: pointer;
@@ -137,9 +137,9 @@
 
 .info__link {
   @include font();
+  @include trans();
   display: block;
   padding-bottom: rem(15px);
   font-size: rem(13px);
   color: $desccolor;
-  transition: all .3s;
 }

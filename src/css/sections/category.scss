@@ -23,16 +23,16 @@
 
   .title {
     position: relative;
-    font-size: rem(42px);
     padding-bottom: rem(70px);
+    font-size: rem(42px);
 
     &:after {
       position: absolute;
       bottom: rem(40px);
       left: 50%;
-      margin-left: rem(-50px);
       width: rem(100px);
       height: 2px;
+      margin-left: rem(-50px);
       background: $linecolor;
       content: "";
     }
