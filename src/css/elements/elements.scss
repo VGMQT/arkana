@@ -9,29 +9,29 @@
 
 .title {
   @include font();
+  @include trans();
   padding-bottom: rem(15px);
   font-size: rem(56px);
   color: $maincolor;
-  transition: all .3s;
 }
 
 .desc {
   @include font();
+  @include trans();
   padding-bottom: rem(50px);
   font-size: rem(13px);
   color: $desccolor;
-  transition: all .3s;
 }
 
 .btn {
   @include font();
+  @include trans();
   display: inline-block;
   padding: rem(25px) rem(45px);
-  font-size: rem(12px);
   text-transform: uppercase;
+  font-size: rem(12px);
   color: $btntext;
   background: $btnbg;
-  transition: all .3s;
 
   &:hover {
     background: $nextbtnbg;

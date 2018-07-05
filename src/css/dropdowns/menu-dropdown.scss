@@ -4,9 +4,10 @@
   cursor: pointer;
 
   &:hover {
-    .header__head-link {
+    .header__link {
       transform: scale(1.2);
     }
+
     .menu-dropdown {
       left: 0;
       opacity: 1;
@@ -26,19 +27,19 @@
   transition: opacity .3s;
 
   &:before {
-    display: block;
     position: absolute;
     top: -160px;
     right: 0;
     left: -50px;
+    display: block;
     height: 160px;
     content: "";
   }
 }
 
 .menu-categories {
-  width: 30%;
   min-width: rem(430px);
+  width: 30%;
   padding: rem(35px) rem(30px);
   border-right: 1px solid $linecolor;
 }
@@ -70,20 +71,20 @@
 
 .menu-categories__link {
   @include font();
+  @include trans();
   display: block;
   margin-left: -3px;
   font-size: rem(12px);
   color: $btnbg;
-  transition: all .3s;
 
   &:before {
+    @include trans();
     display: inline-block;
     width: 0;
     height: 1px;
     margin-bottom: rem(3px);
     background: $btnbg;
     content: "";
-    transition: all .3s;
   }
 
   &:hover {
@@ -188,14 +189,10 @@
 }
 
 .menu-logos__link {
+  @include trans();
   display: block;
   width: rem(160px);
   height: rem(50px);
-  transition: all .3s;
-
-  img {
-    @extend %img;
-  }
 
   &:hover {
     transform: scale(1.1);
@@ -203,5 +200,9 @@
 
   &:active {
     transform: none;
+  }
+
+  img {
+    @extend %img;
   }
 }

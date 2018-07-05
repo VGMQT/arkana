@@ -19,12 +19,12 @@
   align-items: center;
 }
 
-.header__head-link {
+.header__link {
+  @include trans();
   position: relative;
   display: block;
   width: rem(25px);
   height: rem(25px);
-  transition: all .3s;
 
   &:hover {
     transform: scale(1.1);
@@ -41,8 +41,8 @@
 }
 
 .logo {
+  @include trans();
   display: block;
-  transition: all .3s;
 
   &:hover {
     transform: scale(1.1);
@@ -55,18 +55,17 @@
 
 .buyings-count {
   @include font(medium);
+  @include trans();
   position: absolute;
   right: -5px;
   bottom: -4px;
   width: 15px;
   height: 15px;
   padding-top: 1px;
-  font-size: 8px;
-  line-height: 15px;
   text-align: center;
-  -webkit-border-radius: 50%;
-     -moz-border-radius: 50%;
-          border-radius: 50%;
+  line-height: 15px;
+  font-size: 8px;
+  border-radius: 50%;
   color: $btntext;
   background: $btnbg;
 }

@@ -20,7 +20,7 @@
             <div class="header__head">
                 <div class="header__svg-wrapper">
                     <div class="menu">
-                        <a href="#" class="header__head-link">
+                        <a href="#" class="header__link">
                             <svg class="header__svg">
                                 <use xlink:href="assets/img/svg/sprite/svg-sprite.svg#menu"></use>
                             </svg>
@@ -28,7 +28,7 @@
                         <div class="menu-dropdown">
                             <ul class="menu-categories">
                                 <li class="menu-categories__item">
-                                    <div class="title">T-Shirts &amp Blouses</div>
+                                    <h2 class="title">T-Shirts &amp Blouses</h2>
                                     <ul class="menu-categories__list">
                                         <li class="menu-categories__list-item">
                                             <a href="#" class="menu-categories__link">
@@ -48,7 +48,7 @@
                                     </ul>
                                 </li>
                                 <li class="menu-categories__item">
-                                    <div class="title">Outerwear</div>
+                                    <h2 class="title">Outerwear</h2>
                                     <ul class="menu-categories__list">
                                         <li class="menu-categories__list-item">
                                             <a href="#" class="menu-categories__link">
@@ -68,7 +68,7 @@
                                     </ul>
                                 </li>
                                 <li class="menu-categories__item">
-                                    <div class="title">Warm clothes</div>
+                                    <h2 class="title">Warm clothes</h2>
                                     <ul class="menu-categories__list">
                                         <li class="menu-categories__list-item">
                                             <a href="#" class="menu-categories__link">
@@ -95,9 +95,9 @@
                                             <img src="assets/img/header/preview1.jpg" alt="Preview">
                                         </div>
                                         <div class="menu-preview__text">
-                                                <div class="title">Happy intarsia crewneck sweater</div>
-                                                <div class="desc">199.00</div>
-                                                <div class="desc old-price">299.00</div>
+                                            <h3 class="title">Happy intarsia crewneck sweater</h3>
+                                            <span class="desc">199.00</span>
+                                            <span class="desc old-price">299.00</span>
                                         </div>
                                     </a>
                                 </li>
@@ -107,9 +107,9 @@
                                             <img src="assets/img/header/preview2.jpg" alt="Preview">
                                         </div>
                                         <div class="menu-preview__text">
-                                                <div class="title">Happy intarsia crewneck sweater</div>
-                                                <div class="desc">199.00</div>
-                                                <div class="desc old-price">299.00</div>
+                                            <h3 class="title">Happy intarsia crewneck sweater</h3>
+                                            <span class="desc">199.00</span>
+                                            <span class="desc old-price">299.00</span>
                                         </div>
                                     </a>
                                 </li>
@@ -119,9 +119,9 @@
                                             <img src="assets/img/header/preview3.jpg" alt="Preview">
                                         </div>
                                         <div class="menu-preview__text">
-                                                <div class="title">Happy intarsia crewneck sweater</div>
-                                                <div class="desc">199.00</div>
-                                                <div class="desc old-price">299.00</div>
+                                            <h3 class="title">Happy intarsia crewneck sweater</h3>
+                                            <span class="desc">199.00</span>
+                                            <span class="desc old-price">299.00</span>
                                         </div>
                                     </a>
                                 </li>
@@ -161,15 +161,15 @@
                         </div>
                     </div>
                     <div class="search">
-                        <a href="#" class="header__head-link">
+                        <a href="#" class="header__link">
                             <svg class="header__svg">
                                 <use xlink:href="assets/img/svg/sprite/svg-sprite.svg#search"></use>
                             </svg>
                         </a>
-                        <form action="#" method="GET" class="search__dropdown-form">
-                            <input class="search__dropdown-input" type="text">
-                            <button class="search__dropdown-submit" type="submit">
-                                <svg class='search__dropdown-svg'>
+                        <form action="#" method="GET" class="search-dropdown">
+                            <input class="search-dropdown__input" type="text">
+                            <button class="search-dropdown__submit" type="submit">
+                                <svg class='search-dropdown__svg'>
                                     <use xlink:href='assets/img/svg/sprite/svg-sprite.svg#search'></use>
                                 </svg>
                             </button>
@@ -183,7 +183,7 @@
 
                 <div class="header__svg-wrapper">
                     <div class="share">
-                        <a href="#" class="header__head-link">
+                        <a href="#" class="header__link">
                             <svg class="header__svg">
                                 <use xlink:href="assets/img/svg/sprite/svg-sprite.svg#share"></use>
                             </svg>
@@ -219,20 +219,20 @@
                             </li>
                         </ul>
                     </div>
-                    <a id="basket-trigger" href="#" class="header__head-link">
+                    <a id="basket-trigger" href="#" class="header__link">
                         <svg class="header__svg">
                             <use xlink:href="assets/img/svg/sprite/svg-sprite.svg#case"></use>
                         </svg>
-                        <div class="buyings-count">
+                        <span class="buyings-count">
                             3
-                        </div>
+                        </span>
                     </a>
                 </div>
             </div>
             <nav class="nav">
                 <a href="#" class="nav__link">Dresses</a>
                 <a href="#" class="nav__link">Blouses</a>
-                <a href="#" class="nav__link">Tees & Tops</a>
+                <a href="#" class="nav__link">Tees &amp Tops</a>
                 <a href="#" class="nav__link">T-Shirts</a>
                 <a href="#" class="nav__link">Outerwear</a>
                 <a href="#" class="nav__link">Pans</a>
@@ -294,11 +294,15 @@
                             <img src="assets/img/header/preview1.jpg" alt="Product">
                         </div>
                         <div class="basket__products-text">
-                            <div class="title">Happy intarsia crewneck sweater</div>
-                            <div class="products-text__params">
-                                <div class="params__size">S</div>
-                                <div class="params__color">Blue</div>
-                            </div>
+                            <h2 class="title">Happy intarsia crewneck sweater</h2>
+                            <ul class="products-text__params">
+                                <li class="params__item">
+                                    <span>Size</span><span>S</span>
+                                </li>
+                                <li class="params__item">
+                                    <span>Color</span><span>Blue</span>
+                                </li>
+                            </ul>
                             <div class="products-text__price">
                                 <span class="products-text__nominal">24.95</span>
                                 <span class="products-text__count">2</span>
@@ -317,11 +321,15 @@
                             <img src="assets/img/header/preview2.jpg" alt="Product">
                         </div>
                         <div class="basket__products-text">
-                            <div class="title">Happy intarsia crewneck sweater</div>
-                            <div class="products-text__params">
-                                <div class="params__size">S</div>
-                                <div class="params__color">Blue</div>
-                            </div>
+                            <h2 class="title">Happy intarsia crewneck sweater</h2>
+                            <ul class="products-text__params">
+                                <li class="params__item">
+                                    <span>Size</span><span>S</span>
+                                </li>
+                                <li class="params__item">
+                                    <span>Color</span><span>Blue</span>
+                                </li>
+                            </ul>
                             <div class="products-text__price">
                                 <span class="products-text__nominal">24.95</span>
                                 <span class="products-text__count">2</span>
@@ -340,11 +348,15 @@
                             <img src="assets/img/header/preview3.jpg" alt="Product">
                         </div>
                         <div class="basket__products-text">
-                            <div class="title">Happy intarsia crewneck sweater</div>
-                            <div class="products-text__params">
-                                <div class="params__size">S</div>
-                                <div class="params__color">Blue</div>
-                            </div>
+                            <h2 class="title">Happy intarsia crewneck sweater</h2>
+                            <ul class="products-text__params">
+                                <li class="params__item">
+                                    <span>Size</span><span>S</span>
+                                </li>
+                                <li class="params__item">
+                                    <span>Color</span><span>Blue</span>
+                                </li>
+                            </ul>
                             <div class="products-text__price">
                                 <span class="products-text__nominal">24.95</span>
                                 <span class="products-text__count">2</span>

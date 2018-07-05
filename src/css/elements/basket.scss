@@ -27,6 +27,7 @@
   min-width: 350px;
   padding: rem(30px) rem(30px);
   background: $shopcartbg;
+
   .title {
     padding: 0;
     margin: 0;
@@ -37,11 +38,11 @@
 }
 
 .basket__close {
+  @include trans();
   display: block;
   width: rem(15px);
   height: rem(15px);
   margin-left: auto;
-  transition: all .3s;
 
   &:hover {
     transform: scale(1.2);
@@ -106,6 +107,7 @@
 
 .basket__products-text {
   width: 60%;
+
   .title {
     font-size: rem(13px);
   }
@@ -117,24 +119,22 @@
   color: $btnbg;
 }
 
-.params__size {
-  &:before {
-    color: $desccolor;
-    content: "Size: ";
-  }
-}
+.params__item {
+  span {
+    &:first-child {
+      color: $desccolor;
 
-.params__color {
-  &:before {
-    color: $desccolor;
-    content: "Color: ";
+      &:after {
+        content: ": ";
+      }
+    }
   }
 }
 
 .products-text__price {
   @include font(medium);
+  @include trans();
   color: $btnbg;
-  transition: all .3s;
 }
 
 .products-text__nominal {
@@ -155,12 +155,12 @@
 }
 
 .basket__products-close {
+  @include trans();
   position: relative;
   width: rem(20px);
   height: rem(20px);
   border-radius: 50%;
   background: $basketsvgcircle;
-  transition: all .3s;
 
   &:hover {
     background: $btnbg;
@@ -176,6 +176,7 @@
 }
 
 .basket__products-svg {
+  @include trans();
   position: absolute;
   top: 50%;
   left: 50%;
@@ -183,14 +184,13 @@
   width: rem(10px);
   height: rem(10px);
   fill: $btntext;
-  transition: all .3s;
 }
 
 .basket__products-dummy {
   @include font();
   display: none;
-  font-size: rem(16px);
   text-align: center;
+  font-size: rem(16px);
   color: $desccolor;
 }
 
@@ -260,6 +260,7 @@
 
 .price__proceed {
   @include font(medium);
+  @include trans();
   display: block;
   padding: rem(19px) rem(59px);
   margin: auto;
@@ -269,11 +270,10 @@
   border-radius: 25px;
   color: $btntext;
   background: $btnbg;
-  transition: all .3s;
 
   &:hover {
-    background: $btntext;
     color: $btnbg;
+    background: $btntext;
   }
 
   &:active {

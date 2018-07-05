@@ -51,6 +51,11 @@
   max-height: 100%;
 }
 
+//-------------------------//transition//-------------------------//
+@mixin trans($duration: .3s) {
+  transition: all $duration;
+}
+
 //----------------------<<fonts>>----------------------\\
 @mixin font($style: reg) {
   @if $style == reg {

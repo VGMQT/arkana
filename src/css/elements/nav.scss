@@ -7,12 +7,12 @@
 
 .nav__link {
   @include font(sbold);
+  @include trans();
   padding: rem(10px);
   margin-right: rem(70px);
-  font-size: rem(12px);
   text-transform: uppercase;
+  font-size: rem(12px);
   color: $maincolor;
-  transition: all .3s;
 
   &:hover {
     background: $btnbg;

@@ -19,6 +19,7 @@
 }
 
 .payment__method {
+  width: rem(35px);
   margin-right: rem(15px);
 
   &:last-child {
@@ -26,7 +27,6 @@
   }
 
   img {
-    display: block;
-    width: rem(35px);
+    @extend %img;
   }
 }

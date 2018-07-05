@@ -3,7 +3,7 @@
   cursor: pointer;
 
   &:hover {
-    .header__head-link {
+    .header__link {
       transform: scale(1.2);
     }
     .share-dropdown {
@@ -26,11 +26,11 @@
   transition: opacity .3s;
 
   &:before {
-    display: block;
     position: absolute;
     top: -40px;
     right: 0;
     left: 0;
+    display: block;
     height: 40px;
     content: "";
   }
@@ -63,7 +63,7 @@
 }
 
 .share-dropdown__svg {
+  @include trans();
   @extend %img;
   fill: $prossvg;
-  transition: all .3s;
 }
