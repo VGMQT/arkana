@@ -34,6 +34,10 @@
   @include desktop {
     left: 5%;
   }
+
+  @include laptop {
+    width: rem(300px);
+  }
 }
 
 .map__svg {

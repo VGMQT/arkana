@@ -4,6 +4,12 @@
   .container-sm {
     display: flex;
   }
+
+  @include laptop {
+    .container-sm {
+      flex-direction: column;
+    }
+  }
 }
 
 .socials {
@@ -17,9 +23,15 @@
       transform: none;
     }
   }
+
   .desc {
     max-width: rem(250px);
     padding-bottom: rem(35px);
+  }
+
+  @include laptop {
+    order: 1;
+    width: 100%;
   }
 }
 
@@ -118,8 +130,14 @@
 
 .info__list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 65%;
+
+  @include laptop {
+    width: 100%;
+    margin-bottom: rem(30px);
+  }
 }
 
 .info__item {

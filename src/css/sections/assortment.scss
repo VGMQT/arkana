@@ -16,6 +16,12 @@
 
 .assortment__item {
   margin-bottom: rem(40px);
+
+  @include laptop {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .assortment__link {

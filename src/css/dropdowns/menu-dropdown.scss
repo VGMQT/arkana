@@ -39,6 +39,10 @@
   @include desktop {
     width: 800px;
   }
+
+  @include laptop {
+    width: 550px;
+  }
 }
 
 .menu-categories {
@@ -50,6 +54,10 @@
   @include desktop {
     min-width: 0;
     width: 25%;
+  }
+
+  @include laptop {
+    width: 40%;
   }
 }
 
@@ -125,6 +133,11 @@
   width: 45%;
   padding: rem(35px) rem(30px);
   border-right: 1px solid $linecolor;
+
+  @include laptop {
+    width: 60%;
+    border-right: none;
+  }
 }
 
 .menu-preview__item {
@@ -198,6 +211,10 @@
 
   @include desktop {
     width: 30%;
+  }
+
+  @include laptop {
+    display: none;
   }
 }
 

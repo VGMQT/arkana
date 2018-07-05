@@ -69,4 +69,14 @@
       }
     }
   }
+
+  @include laptop {
+    .desc {
+      padding-bottom: rem(20px);
+    }
+
+    .btn {
+      padding: rem(15px) rem(20px);
+    }
+  }
 }

@@ -30,4 +30,8 @@
   @include desktop {
     margin-right: rem(50px);
   }
+
+  @include laptop {
+    margin-right: rem(10px);
+  }
 }
