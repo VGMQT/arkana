@@ -60,6 +60,13 @@
   &:active {
     transform: none;
   }
+
+  @include mobile {
+    width: rem(150px);
+
+    img {
+    }
+  }
 }
 
 .buyings-count {

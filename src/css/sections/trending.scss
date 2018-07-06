@@ -188,21 +188,11 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
-}
 
-.products__img-static {
-  // display: none;
-
-  img {
-    @extend %img;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  &:first-child {
+    display: block;
   }
 }
-
-
 
 .btn_left {
   left: -9999px;

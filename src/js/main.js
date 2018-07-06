@@ -42,21 +42,21 @@ function initMap() {
     infoMarker.onclick = function() {
         map.setCenter(myLatLng);
     };
-};
+}
 
 //-------------------------//tabs (native js)//-------------------------//
 function openList(e, listName) {
 
-    var i, tabcontent, tablinks;
+    let tabcontent, tablinks;
 
     tabcontent = document.getElementsByClassName("trending__products-page");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
+    for (let cont = 0; cont < tabcontent.length; cont++) {
+        tabcontent[cont].style.display = "none";
     }
 
     tablinks = document.getElementsByClassName("tabs__button");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    for (let tab = 0; tab < tablinks.length; tab++) {
+        tablinks[tab].className = tablinks[tab].className.replace(" active", "");
     }
 
     document.getElementById(listName).style.display = "block";
@@ -64,53 +64,6 @@ function openList(e, listName) {
 }
 
 document.getElementById("defaultOpen").click();
-
-//-------------------------//slideshow (native js)//-------------------------//
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-    let i;
-    const slides = document.getElementsByClassName("products__img-slide");
-    const dots = document.getElementsByClassName("color");
-    if (n > slides.length) {slideIndex = 1} 
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none"; 
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-}
-
-
-//-------------------------//dataset//-------------------------//
-// function myFunc(ev, slideId){
-//     console.log(slideId);
-
-//     var i, tabcontent, tablinks;
-
-//     tabcontent = document.getElementsByClassName("products__img-static");
-//     for (i = 0; i < tabcontent.length; i++) {
-//         tabcontent[i].style.display = "none";
-//     }
-
-//     tablinks = document.getElementsByClassName("color");
-//     for (i = 0; i < tablinks.length; i++) {
-//         tablinks[i].className = tablinks[i].className.replace(" active", "");
-//     }
-
-//     document.getElementById(slideId).style.display = "block";
-//     ev.currentTarget.className += " active";
-// }
-
-// document.getElementById("dot1").click();
 
 //-------------------------//document ready functions//-------------------------//
 $(document).ready(function () {
@@ -134,7 +87,6 @@ $(document).ready(function () {
 
     //-------------------------//basket sidebar//-------------------------//
     $('#basket-trigger').on('click', function (e) {
-
         e.preventDefault();
 
         sidebarAnimate(350);
@@ -143,7 +95,6 @@ $(document).ready(function () {
     });
 
     $('#basket-close').on('click', function (e) {
-
         e.preventDefault();
 
         sidebarAnimate(0);
@@ -151,19 +102,15 @@ $(document).ready(function () {
 
     });
 
-    function sidebarAnimate(width) {
-
-        let flag = true;
-
+    function sidebarAnimate(width, duration = 500) {
         const $basket = $('.basket');
-        const duration = 500;
+        let flag = true;
 
         if(flag) {
             flag = false;
 
-            $basket.animate({
-                width: width
-            }, duration, function () {
+            $basket.animate({ width },
+                duration, function () {
                 flag = true;
             });
         }
@@ -173,22 +120,44 @@ $(document).ready(function () {
     $('.basket__products-close').on('click', function (e) {
         e.preventDefault();
 
-        const $this = $(this);
-
-        const $item = $(".basket__products-item"),
-              curItem = $this.closest($item),
+        const $this = $(this),
+              $item = $(".basket__products-item"),
+              $curItem = $this.closest($item),
               duration = 1000;
 
-        curItem.slideUp(duration, function(){
-
-            curItem.remove();
-
-            if($item.length < 2) {
-
-                $('.basket__products-dummy').slideDown(500);
-
-            }
+        $curItem.slideUp(duration, function () {
+            $curItem.remove();
         });
+
+        if ($item.length < 2) {
+            $('.basket__products-dummy').slideDown(500);
+        }
+    });
+
+    //-------------------------//slideshow (native js)//-------------------------//
+    document.getElementById("trends").addEventListener("click", function (e){
+
+        const target = e.target;
+
+        if (target.matches(".color")) {
+            (e).preventDefault();
+
+            const parent = target.closest(".products__item");
+            const slides = parent.querySelectorAll(".products__img-slide");
+            const colors = parent.getElementsByClassName("color");
+            let slideIndex = target.dataset.slide;
+
+            for (let sl = 0; sl < slides.length; sl++) {
+                slides[sl].style.display = "none";
+            }
+
+            for (let col = 0; col < colors.length; col++) {
+                colors[col].className = colors[col].className.replace(" active", "");
+            }
+
+            slides[slideIndex].style.display = "block";
+            colors[slideIndex].className += " active";
+        }
     });
 
 });

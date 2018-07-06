@@ -495,7 +495,7 @@
             <button class="tabs__button" onclick="openList(event, 'prices')">Prices drop</button>
             <button class="tabs__button" onclick="openList(event, 'sales')">Best sales</button>
         </div>
-        <ul class="trending__products">
+        <ul id="trends" class="trending__products">
             <li id="new" class="trending__products-page">
                 <ul class="products__list">
                     <li class="products__item">
@@ -521,25 +521,25 @@
                         <h2 class="title">Excepteur sint occaecat cupidatat</h2>
                         <span class="desc">$ 199.00</span>
                         <ul class="products__colors">
-                            <li class="color color_red" onclick="currentSlide(1)"></li>
-                            <li class="color color_orange" onclick="currentSlide(2)"></li>
-                            <li class="color color_green" onclick="currentSlide(3)"></li>
-                            <li class="color color_blue" onclick="currentSlide(4)"></li>
+                            <li class="color color_red active" data-slide="0"></li>
+                            <li class="color color_orange" data-slide="1"></li>
+                            <li class="color color_green" data-slide="2"></li>
+                            <li class="color color_blue" data-slide="3"></li>
                         </ul>
                     </li>
                     <li class="products__item">
                         <div class="products__img">
 
-                            <div id="slide1" class="products__img-static">
+                            <div id="slide1" class="products__img-slide">
                                 <img src="assets/img/trendings/trend2.jpg" alt="Product">
                             </div>
-                            <div id="slide2" class="products__img-static">
+                            <div id="slide2" class="products__img-slide">
                                 <img src="assets/img/trendings/trend3.jpg" alt="Product">
                             </div>
-                            <div id="slide3" class="products__img-static">
+                            <div id="slide3" class="products__img-slide">
                                 <img src="assets/img/trendings/trend4.jpg" alt="Product">
                             </div>
-                            <div id="slide4" class="products__img-static">
+                            <div id="slide4" class="products__img-slide">
                                 <img src="assets/img/trendings/trend5.jpg" alt="Product">
                             </div>
 
@@ -550,25 +550,25 @@
                         <h2 class="title">Excepteur sint occaecat cupidatat</h2>
                         <span class="desc">$ 199.00</span>
                         <ul class="products__colors">
-                            <li id="dot1" class="color color_red" data-slide="slide1" onclick="myFunc(event, this.dataset.slide)"></li>
-                            <li class="color color_orange" data-slide="slide2" onclick="myFunc(event, this.dataset.slide)"></li>
-                            <li class="color color_green" data-slide="slide3" onclick="myFunc(event, this.dataset.slide)"></li>
-                            <li class="color color_blue" data-slide="slide4" onclick="myFunc(event, this.dataset.slide)"></li>
+                            <li class="color color_red active" data-slide="0"></li>
+                            <li class="color color_orange" data-slide="1"></li>
+                            <li class="color color_green" data-slide="2"></li>
+                            <li class="color color_blue" data-slide="3"></li>
                         </ul>
                     </li>
                     <li class="products__item">
                         <div class="products__img">
 
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend3.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend4.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend5.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend6.jpg" alt="Product">
                             </div>
 
@@ -579,25 +579,25 @@
                         <h2 class="title">Excepteur sint occaecat cupidatat</h2>
                         <span class="desc">$ 199.00</span>
                         <ul class="products__colors">
-                            <li class="color color_red"></li>
-                            <li class="color color_orange"></li>
-                            <li class="color color_green"></li>
-                            <li class="color color_blue"></li>
+                            <li class="color color_red active" data-slide="0"></li>
+                            <li class="color color_orange" data-slide="1"></li>
+                            <li class="color color_green" data-slide="2"></li>
+                            <li class="color color_blue" data-slide="3"></li>
                         </ul>
                     </li>
                     <li class="products__item">
                         <div class="products__img">
 
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend4.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend5.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend6.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend7.jpg" alt="Product">
                             </div>
 
@@ -608,26 +608,26 @@
                         <h2 class="title">Excepteur sint occaecat cupidatat</h2>
                         <span class="desc">$ 199.00</span>
                         <ul class="products__colors">
-                            <li class="color color_red"></li>
-                            <li class="color color_orange"></li>
-                            <li class="color color_green"></li>
-                            <li class="color color_blue"></li>
+                            <li class="color color_red active" data-slide="0"></li>
+                            <li class="color color_orange" data-slide="1"></li>
+                            <li class="color color_green" data-slide="2"></li>
+                            <li class="color color_blue" data-slide="3"></li>
                         </ul>
                     </li>
 
                     <li class="products__item">
                         <div class="products__img">
 
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend5.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend6.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend7.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend8.jpg" alt="Product">
                             </div>
 
@@ -638,25 +638,25 @@
                         <h2 class="title">Excepteur sint occaecat cupidatat</h2>
                         <span class="desc">$ 199.00</span>
                         <ul class="products__colors">
-                            <li class="color color_red"></li>
-                            <li class="color color_orange"></li>
-                            <li class="color color_green"></li>
-                            <li class="color color_blue"></li>
+                            <li class="color color_red active" data-slide="0"></li>
+                            <li class="color color_orange" data-slide="1"></li>
+                            <li class="color color_green" data-slide="2"></li>
+                            <li class="color color_blue" data-slide="3"></li>
                         </ul>
                     </li>
                     <li class="products__item">
                         <div class="products__img">
 
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend6.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend7.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend8.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend9.jpg" alt="Product">
                             </div>
 
@@ -667,25 +667,25 @@
                         <h2 class="title">Excepteur sint occaecat cupidatat</h2>
                         <span class="desc">$ 199.00</span>
                         <ul class="products__colors">
-                            <li class="color color_red"></li>
-                            <li class="color color_orange"></li>
-                            <li class="color color_green"></li>
-                            <li class="color color_blue"></li>
+                            <li class="color color_red active" data-slide="0"></li>
+                            <li class="color color_orange" data-slide="1"></li>
+                            <li class="color color_green" data-slide="2"></li>
+                            <li class="color color_blue" data-slide="3"></li>
                         </ul>
                     </li>
                     <li class="products__item">
                         <div class="products__img">
 
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend7.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend8.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend9.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend1.jpg" alt="Product">
                             </div>
 
@@ -696,25 +696,25 @@
                         <h2 class="title">Excepteur sint occaecat cupidatat</h2>
                         <span class="desc">$ 199.00</span>
                         <ul class="products__colors">
-                            <li class="color color_red"></li>
-                            <li class="color color_orange"></li>
-                            <li class="color color_green"></li>
-                            <li class="color color_blue"></li>
+                            <li class="color color_red active" data-slide="0"></li>
+                            <li class="color color_orange" data-slide="1"></li>
+                            <li class="color color_green" data-slide="2"></li>
+                            <li class="color color_blue" data-slide="3"></li>
                         </ul>
                     </li>
                     <li class="products__item">
                         <div class="products__img">
 
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend8.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend9.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend1.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend2.jpg" alt="Product">
                             </div>
 
@@ -725,26 +725,26 @@
                         <h2 class="title">Excepteur sint occaecat cupidatat</h2>
                         <span class="desc">$ 199.00</span>
                         <ul class="products__colors">
-                            <li class="color color_red"></li>
-                            <li class="color color_orange"></li>
-                            <li class="color color_green"></li>
-                            <li class="color color_blue"></li>
+                            <li class="color color_red active" data-slide="0"></li>
+                            <li class="color color_orange" data-slide="1"></li>
+                            <li class="color color_green" data-slide="2"></li>
+                            <li class="color color_blue" data-slide="3"></li>
                         </ul>
                     </li>
 
                     <li class="products__item">
                         <div class="products__img">
 
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend9.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend1.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend2.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend3.jpg" alt="Product">
                             </div>
 
@@ -755,10 +755,10 @@
                         <h2 class="title">Excepteur sint occaecat cupidatat</h2>
                         <span class="desc">$ 199.00</span>
                         <ul class="products__colors">
-                            <li class="color color_red"></li>
-                            <li class="color color_orange"></li>
-                            <li class="color color_green"></li>
-                            <li class="color color_blue"></li>
+                            <li class="color color_red active" data-slide="0"></li>
+                            <li class="color color_orange" data-slide="1"></li>
+                            <li class="color color_green" data-slide="2"></li>
+                            <li class="color color_blue" data-slide="3"></li>
                         </ul>
                     </li>
                 </ul>
@@ -769,16 +769,16 @@
                     <li class="products__item">
                         <div class="products__img">
 
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend2.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend3.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend4.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend5.jpg" alt="Product">
                             </div>
 
@@ -789,25 +789,25 @@
                         <h2 class="title">Excepteur sint occaecat cupidatat</h2>
                         <span class="desc">$ 199.00</span>
                         <ul class="products__colors">
-                            <li class="color color_red"></li>
-                            <li class="color color_orange"></li>
-                            <li class="color color_green"></li>
-                            <li class="color color_blue"></li>
+                            <li class="color color_red active" data-slide="0"></li>
+                            <li class="color color_orange" data-slide="1"></li>
+                            <li class="color color_green" data-slide="2"></li>
+                            <li class="color color_blue" data-slide="3"></li>
                         </ul>
                     </li>
                     <li class="products__item">
                         <div class="products__img">
 
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend1.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend2.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend3.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend4.jpg" alt="Product">
                             </div>
 
@@ -818,25 +818,25 @@
                         <h2 class="title">Excepteur sint occaecat cupidatat</h2>
                         <span class="desc">$ 199.00</span>
                         <ul class="products__colors">
-                            <li class="color color_red"></li>
-                            <li class="color color_orange"></li>
-                            <li class="color color_green"></li>
-                            <li class="color color_blue"></li>
+                            <li class="color color_red active" data-slide="0"></li>
+                            <li class="color color_orange" data-slide="1"></li>
+                            <li class="color color_green" data-slide="2"></li>
+                            <li class="color color_blue" data-slide="3"></li>
                         </ul>
                     </li>
                     <li class="products__item">
                         <div class="products__img">
 
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend3.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend4.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend5.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend6.jpg" alt="Product">
                             </div>
 
@@ -847,25 +847,25 @@
                         <h2 class="title">Excepteur sint occaecat cupidatat</h2>
                         <span class="desc">$ 199.00</span>
                         <ul class="products__colors">
-                            <li class="color color_red"></li>
-                            <li class="color color_orange"></li>
-                            <li class="color color_green"></li>
-                            <li class="color color_blue"></li>
+                            <li class="color color_red active" data-slide="0"></li>
+                            <li class="color color_orange" data-slide="1"></li>
+                            <li class="color color_green" data-slide="2"></li>
+                            <li class="color color_blue" data-slide="3"></li>
                         </ul>
                     </li>
                     <li class="products__item">
                         <div class="products__img">
 
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend4.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend5.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend6.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend7.jpg" alt="Product">
                             </div>
 
@@ -876,26 +876,26 @@
                         <h2 class="title">Excepteur sint occaecat cupidatat</h2>
                         <span class="desc">$ 199.00</span>
                         <ul class="products__colors">
-                            <li class="color color_red"></li>
-                            <li class="color color_orange"></li>
-                            <li class="color color_green"></li>
-                            <li class="color color_blue"></li>
+                            <li class="color color_red active" data-slide="0"></li>
+                            <li class="color color_orange" data-slide="1"></li>
+                            <li class="color color_green" data-slide="2"></li>
+                            <li class="color color_blue" data-slide="3"></li>
                         </ul>
                     </li>
 
                     <li class="products__item">
                         <div class="products__img">
 
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend5.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend6.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend7.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend8.jpg" alt="Product">
                             </div>
 
@@ -906,25 +906,25 @@
                         <h2 class="title">Excepteur sint occaecat cupidatat</h2>
                         <span class="desc">$ 199.00</span>
                         <ul class="products__colors">
-                            <li class="color color_red"></li>
-                            <li class="color color_orange"></li>
-                            <li class="color color_green"></li>
-                            <li class="color color_blue"></li>
+                            <li class="color color_red active" data-slide="0"></li>
+                            <li class="color color_orange" data-slide="1"></li>
+                            <li class="color color_green" data-slide="2"></li>
+                            <li class="color color_blue" data-slide="3"></li>
                         </ul>
                     </li>
                     <li class="products__item">
                         <div class="products__img">
 
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend6.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend7.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend8.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend9.jpg" alt="Product">
                             </div>
 
@@ -935,25 +935,25 @@
                         <h2 class="title">Excepteur sint occaecat cupidatat</h2>
                         <span class="desc">$ 199.00</span>
                         <ul class="products__colors">
-                            <li class="color color_red"></li>
-                            <li class="color color_orange"></li>
-                            <li class="color color_green"></li>
-                            <li class="color color_blue"></li>
+                            <li class="color color_red active" data-slide="0"></li>
+                            <li class="color color_orange" data-slide="1"></li>
+                            <li class="color color_green" data-slide="2"></li>
+                            <li class="color color_blue" data-slide="3"></li>
                         </ul>
                     </li>
                     <li class="products__item">
                         <div class="products__img">
 
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend7.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend8.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend9.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend1.jpg" alt="Product">
                             </div>
 
@@ -964,25 +964,25 @@
                         <h2 class="title">Excepteur sint occaecat cupidatat</h2>
                         <span class="desc">$ 199.00</span>
                         <ul class="products__colors">
-                            <li class="color color_red"></li>
-                            <li class="color color_orange"></li>
-                            <li class="color color_green"></li>
-                            <li class="color color_blue"></li>
+                            <li class="color color_red active" data-slide="0"></li>
+                            <li class="color color_orange" data-slide="1"></li>
+                            <li class="color color_green" data-slide="2"></li>
+                            <li class="color color_blue" data-slide="3"></li>
                         </ul>
                     </li>
                     <li class="products__item">
                         <div class="products__img">
 
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend8.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend9.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend1.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend2.jpg" alt="Product">
                             </div>
 
@@ -993,26 +993,26 @@
                         <h2 class="title">Excepteur sint occaecat cupidatat</h2>
                         <span class="desc">$ 199.00</span>
                         <ul class="products__colors">
-                            <li class="color color_red"></li>
-                            <li class="color color_orange"></li>
-                            <li class="color color_green"></li>
-                            <li class="color color_blue"></li>
+                            <li class="color color_red active" data-slide="0"></li>
+                            <li class="color color_orange" data-slide="1"></li>
+                            <li class="color color_green" data-slide="2"></li>
+                            <li class="color color_blue" data-slide="3"></li>
                         </ul>
                     </li>
 
                     <li class="products__item">
                         <div class="products__img">
 
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend9.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend1.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend2.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend3.jpg" alt="Product">
                             </div>
 
@@ -1023,10 +1023,10 @@
                         <h2 class="title">Excepteur sint occaecat cupidatat</h2>
                         <span class="desc">$ 199.00</span>
                         <ul class="products__colors">
-                            <li class="color color_red"></li>
-                            <li class="color color_orange"></li>
-                            <li class="color color_green"></li>
-                            <li class="color color_blue"></li>
+                            <li class="color color_red active" data-slide="0"></li>
+                            <li class="color color_orange" data-slide="1"></li>
+                            <li class="color color_green" data-slide="2"></li>
+                            <li class="color color_blue" data-slide="3"></li>
                         </ul>
                     </li>
                 </ul>
@@ -1037,16 +1037,16 @@
                     <li class="products__item">
                         <div class="products__img">
 
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend2.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend3.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend4.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend5.jpg" alt="Product">
                             </div>
 
@@ -1057,25 +1057,25 @@
                         <h2 class="title">Excepteur sint occaecat cupidatat</h2>
                         <span class="desc">$ 199.00</span>
                         <ul class="products__colors">
-                            <li class="color color_red"></li>
-                            <li class="color color_orange"></li>
-                            <li class="color color_green"></li>
-                            <li class="color color_blue"></li>
+                            <li class="color color_red active" data-slide="0"></li>
+                            <li class="color color_orange" data-slide="1"></li>
+                            <li class="color color_green" data-slide="2"></li>
+                            <li class="color color_blue" data-slide="3"></li>
                         </ul>
                     </li>
                     <li class="products__item">
                         <div class="products__img">
 
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend3.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend4.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend5.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend6.jpg" alt="Product">
                             </div>
 
@@ -1086,25 +1086,25 @@
                         <h2 class="title">Excepteur sint occaecat cupidatat</h2>
                         <span class="desc">$ 199.00</span>
                         <ul class="products__colors">
-                            <li class="color color_red"></li>
-                            <li class="color color_orange"></li>
-                            <li class="color color_green"></li>
-                            <li class="color color_blue"></li>
+                            <li class="color color_red active" data-slide="0"></li>
+                            <li class="color color_orange" data-slide="1"></li>
+                            <li class="color color_green" data-slide="2"></li>
+                            <li class="color color_blue" data-slide="3"></li>
                         </ul>
                     </li>
                     <li class="products__item">
                         <div class="products__img">
 
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend1.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend2.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend3.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend4.jpg" alt="Product">
                             </div>
 
@@ -1115,25 +1115,25 @@
                         <h2 class="title">Excepteur sint occaecat cupidatat</h2>
                         <span class="desc">$ 199.00</span>
                         <ul class="products__colors">
-                            <li class="color color_red"></li>
-                            <li class="color color_orange"></li>
-                            <li class="color color_green"></li>
-                            <li class="color color_blue"></li>
+                            <li class="color color_red active" data-slide="0"></li>
+                            <li class="color color_orange" data-slide="1"></li>
+                            <li class="color color_green" data-slide="2"></li>
+                            <li class="color color_blue" data-slide="3"></li>
                         </ul>
                     </li>
                     <li class="products__item">
                         <div class="products__img">
 
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend4.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend5.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend6.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend7.jpg" alt="Product">
                             </div>
 
@@ -1144,26 +1144,26 @@
                         <h2 class="title">Excepteur sint occaecat cupidatat</h2>
                         <span class="desc">$ 199.00</span>
                         <ul class="products__colors">
-                            <li class="color color_red"></li>
-                            <li class="color color_orange"></li>
-                            <li class="color color_green"></li>
-                            <li class="color color_blue"></li>
+                            <li class="color color_red active" data-slide="0"></li>
+                            <li class="color color_orange" data-slide="1"></li>
+                            <li class="color color_green" data-slide="2"></li>
+                            <li class="color color_blue" data-slide="3"></li>
                         </ul>
                     </li>
 
                     <li class="products__item">
                         <div class="products__img">
 
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend5.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend6.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend7.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend8.jpg" alt="Product">
                             </div>
 
@@ -1174,25 +1174,25 @@
                         <h2 class="title">Excepteur sint occaecat cupidatat</h2>
                         <span class="desc">$ 199.00</span>
                         <ul class="products__colors">
-                            <li class="color color_red"></li>
-                            <li class="color color_orange"></li>
-                            <li class="color color_green"></li>
-                            <li class="color color_blue"></li>
+                            <li class="color color_red active" data-slide="0"></li>
+                            <li class="color color_orange" data-slide="1"></li>
+                            <li class="color color_green" data-slide="2"></li>
+                            <li class="color color_blue" data-slide="3"></li>
                         </ul>
                     </li>
                     <li class="products__item">
                         <div class="products__img">
 
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend6.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend7.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend8.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend9.jpg" alt="Product">
                             </div>
 
@@ -1203,25 +1203,25 @@
                         <h2 class="title">Excepteur sint occaecat cupidatat</h2>
                         <span class="desc">$ 199.00</span>
                         <ul class="products__colors">
-                            <li class="color color_red"></li>
-                            <li class="color color_orange"></li>
-                            <li class="color color_green"></li>
-                            <li class="color color_blue"></li>
+                            <li class="color color_red active" data-slide="0"></li>
+                            <li class="color color_orange" data-slide="1"></li>
+                            <li class="color color_green" data-slide="2"></li>
+                            <li class="color color_blue" data-slide="3"></li>
                         </ul>
                     </li>
                     <li class="products__item">
                         <div class="products__img">
 
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend7.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend8.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend9.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend1.jpg" alt="Product">
                             </div>
 
@@ -1232,25 +1232,25 @@
                         <h2 class="title">Excepteur sint occaecat cupidatat</h2>
                         <span class="desc">$ 199.00</span>
                         <ul class="products__colors">
-                            <li class="color color_red"></li>
-                            <li class="color color_orange"></li>
-                            <li class="color color_green"></li>
-                            <li class="color color_blue"></li>
+                            <li class="color color_red active" data-slide="0"></li>
+                            <li class="color color_orange" data-slide="1"></li>
+                            <li class="color color_green" data-slide="2"></li>
+                            <li class="color color_blue" data-slide="3"></li>
                         </ul>
                     </li>
                     <li class="products__item">
                         <div class="products__img">
 
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend8.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend9.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend1.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend2.jpg" alt="Product">
                             </div>
 
@@ -1261,26 +1261,26 @@
                         <h2 class="title">Excepteur sint occaecat cupidatat</h2>
                         <span class="desc">$ 199.00</span>
                         <ul class="products__colors">
-                            <li class="color color_red"></li>
-                            <li class="color color_orange"></li>
-                            <li class="color color_green"></li>
-                            <li class="color color_blue"></li>
+                            <li class="color color_red active" data-slide="0"></li>
+                            <li class="color color_orange" data-slide="1"></li>
+                            <li class="color color_green" data-slide="2"></li>
+                            <li class="color color_blue" data-slide="3"></li>
                         </ul>
                     </li>
 
                     <li class="products__item">
                         <div class="products__img">
 
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend9.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend1.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend2.jpg" alt="Product">
                             </div>
-                            <div class="products__img-static">
+                            <div class="products__img-slide">
                                 <img src="assets/img/trendings/trend3.jpg" alt="Product">
                             </div>
 
@@ -1291,10 +1291,10 @@
                         <h2 class="title">Excepteur sint occaecat cupidatat</h2>
                         <span class="desc">$ 199.00</span>
                         <ul class="products__colors">
-                            <li class="color color_red"></li>
-                            <li class="color color_orange"></li>
-                            <li class="color color_green"></li>
-                            <li class="color color_blue"></li>
+                            <li class="color color_red active" data-slide="0"></li>
+                            <li class="color color_orange" data-slide="1"></li>
+                            <li class="color color_green" data-slide="2"></li>
+                            <li class="color color_blue" data-slide="3"></li>
                         </ul>
                     </li>
                 </ul>
