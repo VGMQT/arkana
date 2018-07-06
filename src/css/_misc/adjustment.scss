@@ -51,7 +51,7 @@ body {
   margin: 0 auto;
 
   @include desktop {
-    width: 1000px;
+    width: 1080px;
   }
 
   @include laptop {
@@ -80,7 +80,7 @@ body {
   }
 
   @include tablet {
-    width: 460px;
+    width: 380px;
   }
 
   @include mobile {

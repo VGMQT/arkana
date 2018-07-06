@@ -41,6 +41,10 @@
   box-shadow: $shadow;
   border: none;
   color: $desccolor;
+
+  @include tablet {
+    width: rem(320px);
+  }
 }
 
 .search-dropdown__submit {

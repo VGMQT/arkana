@@ -43,6 +43,10 @@
   @include laptop {
     width: 550px;
   }
+
+  @include tablet {
+    width: 380px;
+  }
 }
 
 .menu-categories {
@@ -123,6 +127,22 @@
     color: $btntext;
     &:before {
       background: $btntext;
+    }
+  }
+
+  @include tablet {
+    margin-left: 0;
+
+    &:before {
+      display: none;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:active {
+      transform: scale(.98);
     }
   }
 }

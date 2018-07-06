@@ -29,6 +29,10 @@
 
 .instagram__pics {
   display: flex;
+
+  @include tablet {
+    flex-wrap: wrap;
+  }
 }
 
 .instagram__item {
@@ -36,6 +40,10 @@
 
   img {
     @extend %img;
+  }
+
+  @include tablet {
+    width: 33.3%;
   }
 }
 

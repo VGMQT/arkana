@@ -18,6 +18,11 @@
   height: 94%;
   margin-top: rem(47px);
   background: $btntext;
+
+  @include tablet {
+    height: 100%;
+    margin-top: 0;
+  }
 }
 
 .basket__head {
@@ -241,6 +246,10 @@
   align-items: center;
   padding: rem(5px) 0;
   color: $btnbg;
+
+  @include tablet {
+    padding: rem(25px) 0;
+  }
 }
 
 .price__total-name {

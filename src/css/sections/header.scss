@@ -3,6 +3,10 @@
   z-index: 100;
   padding-top: rem(30px);
   margin-bottom: rem(-210px);
+
+  @include tablet {
+    margin-bottom: rem(-225px);
+  }
 }
 
 .header__head {
@@ -33,6 +37,11 @@
   &:active {
     transform: none;
   }
+
+  @include tablet {
+    width: rem(20px);
+    height: rem(20px);
+  }
 }
 
 .header__svg {
@@ -59,8 +68,8 @@
   position: absolute;
   right: -5px;
   bottom: -4px;
-  width: 15px;
-  height: 15px;
+  width: rem(15px);
+  height: rem(15px);
   padding-top: 1px;
   text-align: center;
   line-height: 15px;

@@ -11,6 +11,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include tablet {
+    flex-direction: column;
+  }
 }
 
 .pros__item {
@@ -33,6 +37,11 @@
     &:last-child {
       margin-right: 0;
     }
+  }
+
+  @include tablet {
+    padding-bottom: rem(30px);
+    margin-right: 0;
   }
 }
 

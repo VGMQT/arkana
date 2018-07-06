@@ -169,6 +169,12 @@
       color: $nextbtnbg;
     }
   }
+
+  @include tablet {
+    .btn {
+      font-size: rem(14px);
+    }
+  }
 }
 
 .products__img-slide {

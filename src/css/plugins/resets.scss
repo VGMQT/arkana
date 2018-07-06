@@ -14,6 +14,11 @@
   border: 3px solid $btntext;
   border-radius: 50%;
   cursor: pointer;
+
+  @include tablet {
+    width: rem(35px);
+    height: rem(35px);
+  }
 }
 
 .swiper-button-pr {
@@ -27,6 +32,10 @@
     .swiper__svg {
       fill: $btntext;
     }
+  }
+
+  @include tablet {
+    left: 5px;
   }
 }
 
@@ -42,6 +51,10 @@
       fill: $nextbtnbg;
     }
   }
+
+  @include tablet {
+    right: 5px;
+  }
 }
 
 .swiper__svg {
@@ -50,9 +63,14 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 25px;
-  height: 25px;
+  width: rem(25px);
+  height: rem(25px);
   fill: $sliderbtn;
+
+  @include tablet {
+    width: rem(15px);
+    height: rem(15px);
+  }
 }
 
 .swiper-pagination {
@@ -64,6 +82,10 @@
 
   @include desktop {
     left: 210px;
+  }
+
+  @include tablet {
+    left: 120px;
   }
 }
 
