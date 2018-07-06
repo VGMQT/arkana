@@ -61,4 +61,9 @@
       background: $nextbtnbg;
     }
   }
+
+  @include mobile {
+    width: rem(320px);
+    height: rem(315px);
+  }
 }

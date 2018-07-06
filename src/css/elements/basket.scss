@@ -5,7 +5,7 @@
   z-index: 100;
   display: none;
   width: 100%;
-  height: 100vh;
+  height: 110vh;
   background: rgba($btnbg, .5);
 }
 
@@ -40,6 +40,10 @@
     text-transform: uppercase;
     font-size: rem(22px);
   }
+
+  @include mobile {
+    min-width: 320px;
+  }
 }
 
 .basket__close {
@@ -66,6 +70,10 @@
 .basket__products {
   min-width: 350px;
   padding: rem(25px) rem(30px);
+
+  @include mobile {
+    min-width: 320px;
+  }
 }
 
 .basket__products-item {
@@ -203,6 +211,10 @@
   min-width: 350px;
   padding: rem(20px) rem(30px) rem(10px);
   background: $shopcartbg;
+
+  @include mobile {
+    min-width: 320px;
+  }
 }
 
 .price__counters {

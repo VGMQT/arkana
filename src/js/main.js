@@ -68,8 +68,15 @@ $(document).ready(function () {
     $('#basket-trigger').on('click', function (e) {
         e.preventDefault();
 
-        basketAnimate(350);
-        $('.dark-bg').fadeIn(500);
+        const darkBg = $('.dark-bg');
+
+        if(window.matchMedia("(max-width: 480px)").matches){
+            basketAnimate(320);
+            darkBg.fadeIn(500);
+        } else{
+            basketAnimate(350);
+            darkBg.fadeIn(500);
+        }
 
     });
 

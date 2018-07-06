@@ -147,6 +147,10 @@
   }
 }
 
+.info__links-list {
+  max-width: rem(100px);
+}
+
 .info__links-item {
   &:hover {
     .info__link {

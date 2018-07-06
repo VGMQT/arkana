@@ -10,6 +10,10 @@
     max-width: rem(735px);
     margin: auto;
     text-align: center;
+
+    @include mobile {
+      max-width: rem(340px);
+    }
   }
 }
 
@@ -69,6 +73,16 @@
 
   &:active {
     color: $nextbtnbg;
+  }
+
+  @include mobile {
+    display: block;
+    margin: auto;
+    margin-bottom: rem(30px);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 

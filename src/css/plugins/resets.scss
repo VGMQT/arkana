@@ -19,6 +19,10 @@
     width: rem(35px);
     height: rem(35px);
   }
+
+  @include mobile {
+    top: 80%;
+  }
 }
 
 .swiper-button-pr {

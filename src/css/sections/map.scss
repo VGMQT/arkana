@@ -53,6 +53,12 @@
       margin-right: rem(20px);
     }
   }
+
+  @include mobile {
+    p {
+      padding-bottom: rem(5px);
+    }
+  }
 }
 
 .map__svg {

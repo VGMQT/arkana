@@ -9,6 +9,10 @@
     .share-dropdown {
       left: -135px;
       opacity: 1;
+
+      @include mobile {
+        left: -105px;
+      }
     }
   }
 }

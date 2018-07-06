@@ -47,6 +47,10 @@
   @include tablet {
     width: 380px;
   }
+
+  @include mobile {
+    width: 300px;
+  }
 }
 
 .menu-categories {
@@ -62,6 +66,11 @@
 
   @include laptop {
     width: 40%;
+  }
+
+  @include mobile {
+    width: 100%;
+    border: none;
   }
 }
 
@@ -87,6 +96,10 @@
     &:last-child {
       margin-bottom: 0;
     }
+  }
+
+  @include mobile {
+    margin-right: rem(30px);
   }
 }
 
@@ -157,6 +170,10 @@
   @include laptop {
     width: 60%;
     border-right: none;
+  }
+
+  @include mobile {
+    display: none;
   }
 }
 
