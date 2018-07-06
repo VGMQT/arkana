@@ -44,27 +44,6 @@ function initMap() {
     };
 }
 
-//-------------------------//tabs (native js)//-------------------------//
-function openList(e, listName) {
-
-    let tabcontent, tablinks;
-
-    tabcontent = document.getElementsByClassName("trending__products-page");
-    for (let cont = 0; cont < tabcontent.length; cont++) {
-        tabcontent[cont].style.display = "none";
-    }
-
-    tablinks = document.getElementsByClassName("tabs__button");
-    for (let tab = 0; tab < tablinks.length; tab++) {
-        tablinks[tab].className = tablinks[tab].className.replace(" active", "");
-    }
-
-    document.getElementById(listName).style.display = "block";
-    e.currentTarget.className += " active";
-}
-
-document.getElementById("defaultOpen").click();
-
 //-------------------------//document ready functions//-------------------------//
 $(document).ready(function () {
 
@@ -89,7 +68,7 @@ $(document).ready(function () {
     $('#basket-trigger').on('click', function (e) {
         e.preventDefault();
 
-        sidebarAnimate(350);
+        basketAnimate(350);
         $('.dark-bg').fadeIn(500);
 
     });
@@ -97,12 +76,12 @@ $(document).ready(function () {
     $('#basket-close').on('click', function (e) {
         e.preventDefault();
 
-        sidebarAnimate(0);
+        basketAnimate(0);
         $('.dark-bg').fadeOut(500);
 
     });
 
-    function sidebarAnimate(width, duration = 500) {
+    function basketAnimate(width, duration = 500) {
         const $basket = $('.basket');
         let flag = true;
 
@@ -117,7 +96,7 @@ $(document).ready(function () {
     }
 
     //-------------------------//sidebar checkbox//-------------------------//
-    $('.basket__products-close').on('click', function (e) {
+    $('.basket__products-remove').on('click', function (e) {
         e.preventDefault();
 
         const $this = $(this),
@@ -134,7 +113,35 @@ $(document).ready(function () {
         }
     });
 
-    //-------------------------//slideshow (native js)//-------------------------//
+    //-------------------------//tabs (native js)//-------------------------//
+    document.getElementById("tabs").addEventListener("click", function(e){
+
+        const target = e.target;
+
+        if (target.matches(".tabs__button")){
+            e.preventDefault();
+
+            const parent = target.closest(".trending");
+            const content = parent.querySelectorAll(".trending__products-page");
+            const tabBtns = parent.getElementsByClassName("tabs__button");
+            let tabIndex = target.dataset.tab;
+
+            for (let cont = 0; cont < content.length; cont++) {
+                content[cont].style.display = "none";
+            }
+
+            for (let tab = 0; tab < tabBtns.length; tab++) {
+                tabBtns[tab].className = tabBtns[tab].className.replace(" active", "");
+            }
+
+            content[tabIndex].style.display = "block";
+            tabBtns[tabIndex].className += " active";
+        }
+    });
+
+    document.getElementById("defaultOpen").click();
+
+    //-------------------------//slideshow/tabs (native js)//-------------------------//
     document.getElementById("trends").addEventListener("click", function (e){
 
         const target = e.target;

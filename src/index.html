@@ -309,7 +309,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="#" class="basket__products-close">
+                    <a href="#" class="basket__products-remove">
                         <svg class='basket__products-svg'>
                             <use xlink:href='assets/img/svg/sprite/svg-sprite.svg#close'></use>
                         </svg>
@@ -336,7 +336,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="#" class="basket__products-close">
+                    <a href="#" class="basket__products-remove">
                         <svg class='basket__products-svg'>
                             <use xlink:href='assets/img/svg/sprite/svg-sprite.svg#close'></use>
                         </svg>
@@ -363,7 +363,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="#" class="basket__products-close">
+                    <a href="#" class="basket__products-remove">
                         <svg class='basket__products-svg'>
                             <use xlink:href='assets/img/svg/sprite/svg-sprite.svg#close'></use>
                         </svg>
@@ -493,13 +493,13 @@
             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
             laborum.
         </p>
-        <div class="tabs">
-            <button id="defaultOpen" class="tabs__button active" onclick="openList(event, 'new')">New products</button>
-            <button class="tabs__button" onclick="openList(event, 'prices')">Prices drop</button>
-            <button class="tabs__button" onclick="openList(event, 'sales')">Best sales</button>
+        <div id="tabs" class="tabs">
+            <button id="defaultOpen" class="tabs__button active" data-tab="0">New products</button>
+            <button class="tabs__button" data-tab="1">Prices drop</button>
+            <button class="tabs__button" data-tab="2">Best sales</button>
         </div>
         <ul id="trends" class="trending__products">
-            <li id="new" class="trending__products-page">
+            <li class="trending__products-page">
                 <ul class="products__list">
                     <li class="products__item">
                         <div class="products__img">
@@ -767,7 +767,7 @@
                 </ul>
                 <a href="#" class="btn">All products</a>
             </li>
-            <li id="prices" class="trending__products-page">
+            <li class="trending__products-page">
                 <ul class="products__list">
                     <li class="products__item">
                         <div class="products__img">
@@ -1035,7 +1035,7 @@
                 </ul>
                 <a href="#" class="btn">All products</a>
             </li>
-            <li id="sales" class="trending__products-page">
+            <li class="trending__products-page">
                 <ul class="products__list">
                     <li class="products__item">
                         <div class="products__img">
